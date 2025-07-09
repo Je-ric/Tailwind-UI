@@ -1,0 +1,104 @@
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <title>Stateful Buttons</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+</head>
+
+<body class="font-inter antialiased bg-zinc-50 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100 transition-colors duration-300">
+  <!-- Theme Toggle -->
+  <button id="themeToggle" aria-label="Toggle dark mode" class="fixed top-4 right-4 flex items-center gap-2 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white/70 dark:bg-zinc-800/70 backdrop-blur-md px-4 py-2 text-xs font-medium hover:ring-2 hover:ring-indigo-400 transition">
+    <i data-lucide="moon" class="w-4 h-4 dark:hidden"></i>
+    <i data-lucide="sun" class="w-4 h-4 hidden dark:inline"></i>
+  </button>
+
+  <main class="max-w-5xl mx-auto px-6 py-24">
+    <header class="mb-16 text-center">
+      <h1 class="text-4xl sm:text-5xl font-semibold tracking-tight mb-3">Stateful Buttons</h1>
+      <p class="max-w-md mx-auto text-zinc-600 dark:text-zinc-400">Common UI states—success, error, warning, info, neutral, disabled, outline, loading—ready to drop in.</p>
+    </header>
+
+    <!-- Button Grid -->
+    <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+
+      <!-- Success -->
+      <button class="btn-state flex items-center justify-center gap-2 rounded-lg px-6 py-3 font-medium text-white bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 transition
+                     focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-emerald-500">
+        <i data-lucide="check-circle" class="w-4 h-4"></i>Success
+      </button>
+
+      <!-- Error -->
+      <button class="btn-state flex items-center justify-center gap-2 rounded-lg px-6 py-3 font-medium text-white bg-rose-600 hover:bg-rose-500 active:bg-rose-700 transition
+                     focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-rose-500">
+        <i data-lucide="x-circle" class="w-4 h-4"></i>Error
+      </button>
+
+      <!-- Warning -->
+      <button class="btn-state flex items-center justify-center gap-2 rounded-lg px-6 py-3 font-medium text-white bg-amber-500 hover:bg-amber-400 active:bg-amber-600 transition
+                     focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-500">
+        <i data-lucide="alert-triangle" class="w-4 h-4"></i>Warning
+      </button>
+
+      <!-- Info -->
+      <button class="btn-state flex items-center justify-center gap-2 rounded-lg px-6 py-3 font-medium text-white bg-sky-600 hover:bg-sky-500 active:bg-sky-700 transition
+                     focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-sky-500">
+        <i data-lucide="info" class="w-4 h-4"></i>Info
+      </button>
+
+      <!-- Neutral -->
+      <button class="btn-state flex items-center justify-center gap-2 rounded-lg px-6 py-3 font-medium text-zinc-800 bg-zinc-200 hover:bg-zinc-300 active:bg-zinc-400 transition
+                     dark:text-zinc-100 dark:bg-zinc-700 dark:hover:bg-zinc-600 dark:active:bg-zinc-500
+                     focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-zinc-400 dark:focus-visible:ring-zinc-500">
+        <i data-lucide="minus-circle" class="w-4 h-4"></i>Neutral
+      </button>
+
+      <!-- Disabled -->
+      <button disabled="" class="flex items-center justify-center gap-2 rounded-lg px-6 py-3 font-medium bg-zinc-300 text-zinc-500 cursor-not-allowed opacity-70 dark:bg-zinc-800 dark:text-zinc-500">
+        <i data-lucide="slash" class="w-4 h-4"></i>Disabled
+      </button>
+
+      <!-- Outline -->
+      <button class="btn-state flex items-center justify-center gap-2 rounded-lg px-6 py-3 font-medium text-indigo-600 ring-1 ring-inset ring-indigo-600/60 hover:bg-indigo-50 dark:hover:bg-indigo-600/10 transition
+                     focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500">
+        <i data-lucide="square" class="w-4 h-4"></i>Outline
+      </button>
+
+      <!-- Loading -->
+      <button disabled="" class="flex items-center justify-center gap-3 rounded-lg px-6 py-3 font-medium bg-indigo-500 text-white cursor-wait
+                             focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500">
+        <svg class="animate-spin h-4 w-4 opacity-90" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" class="opacity-25"></circle>
+          <path d="M4 12a8 8 0 018-8" stroke="currentColor" stroke-width="4" class="opacity-75" stroke-linecap="round"></path>
+        </svg>
+        Loading
+      </button>
+    </div>
+  </main>
+
+  <!-- Fade-in Sequence + Theme Logic -->
+  <script>
+    addEventListener('DOMContentLoaded',()=>{
+
+      document.querySelectorAll('.btn-state').forEach((el,i)=>{
+        el.style.opacity='0';el.style.transform='translateY(12px)';
+        setTimeout(()=>{el.style.opacity='1';el.style.transform='translateY(0)'},160+i*90);
+      });
+
+      const root=document.documentElement,storageKey='pref-theme',
+            saved=localStorage.getItem(storageKey),
+            mql=matchMedia('(prefers-color-scheme: dark)');
+      if(saved==='dark'||(!saved&&mql.matches))root.classList.add('dark');
+      document.getElementById('themeToggle').onclick=()=>{
+        root.classList.toggle('dark');
+        localStorage.setItem(storageKey,root.classList.contains('dark')?'dark':'light');
+      };
+    });
+  </script>
+
+  <!-- Lucide -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>lucide.createIcons();</script>
+
+</body></html>

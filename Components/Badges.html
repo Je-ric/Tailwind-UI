@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stateful Buttons, Alerts & Badges</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: { extend: { fontFamily: { inter: ['Inter', 'sans-serif'] } } }
+    };
+  </script>
+</head>
+
+<body class="font-inter antialiased bg-zinc-50 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100 transition-colors duration-300">
+  <!-- Theme Toggle -->
+  <button id="themeToggle" aria-label="Toggle dark mode"
+    class="fixed top-4 right-4 flex items-center gap-2 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white/70 dark:bg-zinc-800/70 backdrop-blur-md px-4 py-2 text-xs font-medium hover:ring-2 hover:ring-indigo-400 transition">
+    <i data-lucide="moon" class="w-4 h-4 dark:hidden"></i>
+    <i data-lucide="sun"  class="w-4 h-4 hidden dark:inline"></i>
+  </button>
+
+  <main class="max-w-5xl mx-auto px-6 py-24 space-y-24">
+    <!-- Badges ----------------------------------------------------------->
+    <section>
+      <h2 class="text-3xl font-semibold tracking-tight mb-6">Badges</h2>
+
+      <div class="flex flex-wrap gap-4">
+        <!-- 1 New -->
+        <span class="badge inline-flex items-center gap-1 px-3 py-1 text-xs font-medium rounded-full bg-indigo-600 text-white hover:opacity-90 transition">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>New
+        </span>
+
+        <!-- 2 Beta -->
+        <span class="badge inline-flex items-center gap-1 px-3 py-1 text-xs font-medium rounded-full bg-amber-500 text-black/90 hover:opacity-90 transition">
+          <i data-lucide="beaker" class="w-3.5 h-3.5"></i>Beta
+        </span>
+
+        <!-- 3 Pro -->
+        <span class="badge inline-flex items-center gap-1 px-3 py-1 text-xs font-medium rounded-full bg-emerald-600 text-white hover:opacity-90 transition">
+          <i data-lucide="star" class="w-3.5 h-3.5"></i>Pro
+        </span>
+
+        <!-- 4 Admin -->
+        <span class="badge inline-flex items-center gap-1 px-3 py-1 text-xs font-medium rounded-full bg-rose-600 text-white hover:opacity-90 transition">
+          <i data-lucide="shield" class="w-3.5 h-3.5"></i>Admin
+        </span>
+
+        <!-- 5 Verified -->
+        <span class="badge inline-flex items-center gap-1 px-3 py-1 text-xs font-medium rounded-full bg-sky-600 text-white hover:opacity-90 transition">
+          <i data-lucide="check" class="w-3.5 h-3.5"></i>Verified
+        </span>
+
+        <!-- 6 Online -->
+        <span class="badge inline-flex items-center gap-2 px-3 py-1 text-xs font-medium rounded-full bg-emerald-50 text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-300 hover:ring-1 hover:ring-emerald-300 transition">
+          <span class="h-2 w-2 rounded-full bg-emerald-500"></span>Online
+        </span>
+
+        <!-- 7 Offline -->
+        <span class="badge inline-flex items-center gap-2 px-3 py-1 text-xs font-medium rounded-full bg-zinc-200 text-zinc-700 dark:bg-zinc-700/40 dark:text-zinc-300 hover:ring-1 hover:ring-zinc-400 transition">
+          <span class="h-2 w-2 rounded-full bg-zinc-500"></span>Offline
+        </span>
+
+        <!-- 8 Pending -->
+        <span class="badge inline-flex items-center gap-2 px-3 py-1 text-xs font-medium rounded-full bg-amber-100 text-amber-700 dark:bg-amber-500/10 dark:text-amber-300 hover:ring-1 hover:ring-amber-300 transition">
+          <span class="h-2 w-2 rounded-full bg-amber-400"></span>Pending
+        </span>
+
+        <!-- 9 Error -->
+        <span class="badge inline-flex items-center gap-2 px-3 py-1 text-xs font-medium rounded-full bg-rose-100 text-rose-700 dark:bg-rose-500/10 dark:text-rose-300 hover:ring-1 hover:ring-rose-300 transition">
+          <span class="h-2 w-2 rounded-full bg-rose-500"></span>Error
+        </span>
+
+        <!-- 10 Info -->
+        <span class="badge inline-flex items-center gap-1 px-3 py-1 text-xs font-medium rounded-full bg-sky-100 text-sky-700 dark:bg-sky-500/10 dark:text-sky-300 hover:ring-1 hover:ring-sky-300 transition">
+          <i data-lucide="info" class="w-3.5 h-3.5"></i>Info
+        </span>
+
+        <!-- 11 Update -->
+        <span class="badge inline-flex items-center gap-1 px-3 py-1 text-xs font-medium rounded-full bg-indigo-100 text-indigo-700 dark:bg-indigo-500/10 dark:text-indigo-300 hover:ring-1 hover:ring-indigo-300 transition">
+          <i data-lucide="arrow-up-circle" class="w-3.5 h-3.5"></i>Update
+        </span>
+
+        <!-- 12 Completed -->
+        <span class="badge inline-flex items-center gap-1 px-3 py-1 text-xs font-medium rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-300 hover:ring-1 hover:ring-emerald-300 transition">
+          <i data-lucide="check-circle" class="w-3.5 h-3.5"></i>Completed
+        </span>
+
+        <!-- 13 Failed -->
+        <span class="badge inline-flex items-center gap-1 px-3 py-1 text-xs font-medium rounded-full bg-rose-100 text-rose-700 dark:bg-rose-500/10 dark:text-rose-300 hover:ring-1 hover:ring-rose-300 transition">
+          <i data-lucide="x-circle" class="w-3.5 h-3.5"></i>Failed
+        </span>
+
+        <!-- 14 Draft -->
+        <span class="badge inline-flex items-center gap-1 px-3 py-1 text-xs font-medium rounded-full bg-zinc-100 text-zinc-700 dark:bg-zinc-700/40 dark:text-zinc-300 hover:ring-1 hover:ring-zinc-300 transition">
+          <i data-lucide="file-text" class="w-3.5 h-3.5"></i>Draft
+        </span>
+
+        <!-- 15 Premium -->
+        <span class="badge inline-flex items-center gap-1 px-3 py-1 text-xs font-medium rounded-full bg-fuchsia-600 text-white hover:opacity-90 transition">
+          <i data-lucide="diamond" class="w-3.5 h-3.5"></i>Premium
+        </span>
+
+        <!-- 16 Free -->
+        <span class="badge inline-flex items-center gap-1 px-3 py-1 text-xs font-medium rounded-full bg-emerald-200 text-emerald-800 dark:bg-emerald-600/20 dark:text-emerald-300 hover:ring-1 hover:ring-emerald-300 transition">
+          <i data-lucide="gift" class="w-3.5 h-3.5"></i>Free
+        </span>
+
+        <!-- 17 Sale -->
+        <span class="badge inline-flex items-center gap-1 px-3 py-1 text-xs font-medium rounded-full bg-rose-600 text-white hover:opacity-90 transition">
+          <i data-lucide="tag" class="w-3.5 h-3.5"></i>Sale
+        </span>
+
+        <!-- 18 Hot -->
+        <span class="badge inline-flex items-center gap-1 px-3 py-1 text-xs font-medium rounded-full bg-amber-600 text-black/90 hover:opacity-90 transition">
+          <i data-lucide="flame" class="w-3.5 h-3.5"></i>Hot
+        </span>
+
+        <!-- 19 Event -->
+        <span class="badge inline-flex items-center gap-1 px-3 py-1 text-xs font-medium rounded-full bg-sky-600 text-white hover:opacity-90 transition">
+          <i data-lucide="calendar" class="w-3.5 h-3.5"></i>Event
+        </span>
+
+        <!-- 20 Support -->
+        <span class="badge inline-flex items-center gap-1 px-3 py-1 text-xs font-medium rounded-full bg-indigo-600 text-white hover:opacity-90 transition">
+          <i data-lucide="life-buoy" class="w-3.5 h-3.5"></i>Support
+        </span>
+      </div>
+    </section>
+  </main>
+
+  <!-- JS: Animations, Theme, Dismiss ------------------------------------>
+  <script>
+    addEventListener('DOMContentLoaded', () => {
+
+      // Fade-in buttons
+      document.querySelectorAll('.btn-state').forEach((el, i) => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(12px)';
+        setTimeout(() => {
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0)';
+        }, 160 + i * 90);
+      });
+
+      // Fade-in alerts
+      document.querySelectorAll('.alert').forEach((el, i) => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(12px)';
+        setTimeout(() => {
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0)';
+        }, 700 + i * 90);
+      });
+
+      // Fade-in badges
+      document.querySelectorAll('.badge').forEach((el, i) => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(12px)';
+        setTimeout(() => {
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0)';
+        }, 1400 + i * 60);
+      });
+
+      // Theme persistence
+      const root = document.documentElement,
+            storageKey = 'pref-theme',
+            saved = localStorage.getItem(storageKey),
+            mql = matchMedia('(prefers-color-scheme: dark)');
+      if (saved === 'dark' || (!saved && mql.matches)) root.classList.add('dark');
+      document.getElementById('themeToggle').onclick = () => {
+        root.classList.toggle('dark');
+        localStorage.setItem(storageKey, root.classList.contains('dark') ? 'dark' : 'light');
+      };
+
+      // Dismiss alerts
+      document.querySelectorAll('.dismiss').forEach(btn =>
+        btn.addEventListener('click', e => {
+          const alert = e.currentTarget.closest('.alert');
+          alert.style.opacity = '0';
+          alert.style.transform = 'translateY(-8px)';
+          setTimeout(() => alert.remove(), 180);
+        }));
+    });
+  </script>
+
+  <!-- Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

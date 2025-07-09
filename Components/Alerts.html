@@ -1,0 +1,186 @@
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <title>Stateful Buttons &amp; Alerts</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+</head>
+
+<body class="font-inter antialiased bg-zinc-50 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100 transition-colors duration-300">
+  <!-- Theme Toggle -->
+  <button id="themeToggle" aria-label="Toggle dark mode" class="fixed top-4 right-4 flex items-center gap-2 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white/70 dark:bg-zinc-800/70 backdrop-blur-md px-4 py-2 text-xs font-medium hover:ring-2 hover:ring-indigo-400 transition">
+    <i data-lucide="moon" class="w-4 h-4 dark:hidden"></i>
+    <i data-lucide="sun" class="w-4 h-4 hidden dark:inline"></i>
+  </button>
+
+  <main class="max-w-5xl mx-auto px-6 py-24 space-y-24">
+
+    <!-- Alerts ----------------------------------------------------------->
+    <section>
+      <h2 class="text-3xl font-semibold tracking-tight mb-6">Alert Styles</h2>
+      <div class="space-y-4">
+
+        <!-- Success – Subtle -->
+        <div role="alert" class="alert flex items-start gap-3 rounded-lg border border-emerald-300/40 bg-emerald-50 dark:bg-emerald-500/10 p-4">
+          <i data-lucide="check-circle" class="w-5 h-5 text-emerald-600 dark:text-emerald-400 mt-0.5"></i>
+          <div class="flex-1 text-sm">
+            <span class="font-medium text-emerald-800 dark:text-emerald-300">Success:</span>
+            Your changes have been saved successfully.
+          </div>
+          <button aria-label="Dismiss success alert" class="dismiss text-emerald-700 hover:text-emerald-900 dark:text-emerald-300/80 dark:hover:text-emerald-100">
+            <i data-lucide="x" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <!-- Success – Solid -->
+        <div role="alert" class="alert flex items-start gap-3 rounded-lg bg-emerald-600 text-white p-4">
+          <i data-lucide="check-circle" class="w-5 h-5 mt-0.5"></i>
+          <div class="flex-1 text-sm">
+            <span class="font-medium">Success:</span>
+            Account verified! Enjoy full access.
+          </div>
+          <button aria-label="Dismiss success alert solid" class="dismiss text-white/80 hover:text-white">
+            <i data-lucide="x" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <!-- Error – Subtle -->
+        <div role="alert" class="alert flex items-start gap-3 rounded-lg border border-rose-300/40 bg-rose-50 dark:bg-rose-500/10 p-4">
+          <i data-lucide="x-circle" class="w-5 h-5 text-rose-600 dark:text-rose-400 mt-0.5"></i>
+          <div class="flex-1 text-sm">
+            <span class="font-medium text-rose-800 dark:text-rose-300">Error:</span>
+            Something went wrong during processing.
+          </div>
+          <button aria-label="Dismiss error alert" class="dismiss text-rose-700 hover:text-rose-900 dark:text-rose-300/80 dark:hover:text-rose-100">
+            <i data-lucide="x" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <!-- Error – Solid -->
+        <div role="alert" class="alert flex items-start gap-3 rounded-lg bg-rose-600 text-white p-4">
+          <i data-lucide="x-octagon" class="w-5 h-5 mt-0.5"></i>
+          <div class="flex-1 text-sm">
+            <span class="font-medium">Critical Error:</span>
+            Payment failed. Please try again later.
+          </div>
+          <button aria-label="Dismiss error alert solid" class="dismiss text-white/80 hover:text-white">
+            <i data-lucide="x" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <!-- Warning – Subtle -->
+        <div role="alert" class="alert flex items-start gap-3 rounded-lg border border-amber-300/40 bg-amber-50 dark:bg-amber-500/10 p-4">
+          <i data-lucide="alert-triangle" class="w-5 h-5 text-amber-600 dark:text-amber-400 mt-0.5"></i>
+          <div class="flex-1 text-sm">
+            <span class="font-medium text-amber-800 dark:text-amber-300">Warning:</span>
+            You have unsaved changes.
+          </div>
+          <button aria-label="Dismiss warning alert" class="dismiss text-amber-700 hover:text-amber-900 dark:text-amber-300/80 dark:hover:text-amber-100">
+            <i data-lucide="x" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <!-- Warning – Solid -->
+        <div role="alert" class="alert flex items-start gap-3 rounded-lg bg-amber-500 text-black/90 dark:text-zinc-900 p-4">
+          <i data-lucide="alert-triangle" class="w-5 h-5 mt-0.5"></i>
+          <div class="flex-1 text-sm">
+            <span class="font-medium">Caution:</span>
+            Subscription is about to expire.
+          </div>
+          <button aria-label="Dismiss warning alert solid" class="dismiss text-black/70 hover:text-black">
+            <i data-lucide="x" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <!-- Info – Subtle -->
+        <div role="alert" class="alert flex items-start gap-3 rounded-lg border border-sky-300/40 bg-sky-50 dark:bg-sky-500/10 p-4">
+          <i data-lucide="info" class="w-5 h-5 text-sky-600 dark:text-sky-400 mt-0.5"></i>
+          <div class="flex-1 text-sm">
+            <span class="font-medium text-sky-800 dark:text-sky-300">Info:</span>
+            New features have been added to your dashboard.
+          </div>
+          <button aria-label="Dismiss info alert" class="dismiss text-sky-700 hover:text-sky-900 dark:text-sky-300/80 dark:hover:text-sky-100">
+            <i data-lucide="x" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <!-- Info – Solid -->
+        <div role="alert" class="alert flex items-start gap-3 rounded-lg bg-sky-600 text-white p-4">
+          <i data-lucide="info" class="w-5 h-5 mt-0.5"></i>
+          <div class="flex-1 text-sm">
+            <span class="font-medium">Heads-up:</span>
+            Servers will undergo maintenance tonight.
+          </div>
+          <button aria-label="Dismiss info alert solid" class="dismiss text-white/80 hover:text-white">
+            <i data-lucide="x" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <!-- Neutral – Outline -->
+        <div role="alert" class="alert flex items-start gap-3 rounded-lg border border-zinc-300/60 dark:border-zinc-600 p-4">
+          <i data-lucide="message-square" class="w-5 h-5 text-zinc-500 dark:text-zinc-400 mt-0.5"></i>
+          <div class="flex-1 text-sm">
+            <span class="font-medium">Note:</span>
+            This feature is in beta.
+          </div>
+          <button aria-label="Dismiss neutral alert" class="dismiss text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300">
+            <i data-lucide="x" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- JS: Animations, Theme, Dismiss ------------------------------------>
+  <script>
+    addEventListener('DOMContentLoaded', () => {
+
+      // Fade-in buttons
+      document.querySelectorAll('.btn-state').forEach((el, i) => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(12px)';
+        setTimeout(() => {
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0)';
+        }, 160 + i * 90);
+      });
+
+      // Fade-in alerts with stagger
+      document.querySelectorAll('.alert').forEach((el, i) => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(12px)';
+        setTimeout(() => {
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0)';
+        }, 700 + i * 90);
+      });
+
+      // Theme persistence
+      const root = document.documentElement,
+            storageKey = 'pref-theme',
+            saved = localStorage.getItem(storageKey),
+            mql = matchMedia('(prefers-color-scheme: dark)');
+      if (saved === 'dark' || (!saved && mql.matches)) root.classList.add('dark');
+      document.getElementById('themeToggle').onclick = () => {
+        root.classList.toggle('dark');
+        localStorage.setItem(storageKey, root.classList.contains('dark') ? 'dark' : 'light');
+      };
+
+      // Dismiss alerts (accessibility friendly)
+      document.querySelectorAll('.dismiss').forEach(btn =>
+        btn.addEventListener('click', e => {
+          const alert = e.currentTarget.closest('.alert');
+          alert.style.opacity = '0';
+          alert.style.transform = 'translateY(-8px)';
+          setTimeout(() => alert.remove(), 180);
+        }));
+    });
+  </script>
+
+  <!-- Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>lucide.createIcons();</script>
+
+</body></html>
