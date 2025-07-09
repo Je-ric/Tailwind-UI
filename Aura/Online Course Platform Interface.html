@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillForge – Online Design & Code Courses</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/satoshi@4.2.1/semibold.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <style>
+    html,body{font-family:'Inter',sans-serif;}
+    .font-satoshi-semibold {
+      font-family: 'Satoshi', 'Inter', sans-serif;
+      font-weight: 600;
+      letter-spacing: -0.015em;
+    }
+    .spotlight-bg {
+      background: radial-gradient(ellipse at 50% 40%, rgba(120,80,255,0.30) 0%, rgba(20,20,40,0.90) 70%);
+    }
+    .card-glass {
+      background: linear-gradient(135deg, rgba(255,255,255,0.17) 0%, rgba(120,80,255,0.13) 100%);
+      backdrop-filter: blur(18px) saturate(140%);
+      border: 1px solid rgba(255,255,255,0.14);
+      box-shadow: 0 8px 32px 0 rgba(40,30,100,0.18), 0 2px 8px 0 rgba(80,80,120,0.10);
+      transition:
+        transform 0.18s cubic-bezier(.22,1,.36,1),
+        box-shadow 0.18s cubic-bezier(.22,1,.36,1);
+      will-change: transform;
+      outline: none;
+    }
+    .card-glass:focus-visible {
+      box-shadow: 0 0 0 3px rgba(139,92,246,0.38), 0 8px 32px 0 rgba(40,30,100,0.18), 0 2px 8px 0 rgba(80,80,120,0.10);
+    }
+    .glow {
+      box-shadow: 0 0 36px 8px #a684fa88,0 2px 8px 0 #7c3aed44;
+    }
+    .opacity-0 { opacity: 0; }
+    .blur-md { filter: blur(16px);}
+    .translate-y-8 { transform: translateY(2rem);}
+    .animate-in {
+      opacity: 1 !important;
+      filter: blur(0) !important;
+      transform: none !important;
+      transition: all .9s cubic-bezier(.4,0,.2,1);
+    }
+    @property --gradient-angle {
+      syntax: "<angle>";
+      initial-value: 0deg;
+      inherits: false;
+    }
+    .shiny-cta {
+      --gradient-angle: 0deg;
+      --gradient-angle-offset: 0deg;
+      --gradient-percent: 20%;
+      --gradient-shine: #8484ff;
+      position: relative;
+      overflow: hidden;
+      border-radius: 9999px;
+      padding: 1.25rem 2.5rem;
+      font-size: 1.125rem;
+      line-height: 1.2;
+      font-weight: 500;
+      color: #fff;
+      background: linear-gradient(#000,#000) padding-box,
+        conic-gradient(
+          from calc(var(--gradient-angle)),
+          transparent 0%,
+          #6366f1 5%,
+          #a78bfa 15%,
+          #6366f1 30%,
+          transparent 40%,
+          transparent 100%
+        ) border-box;
+      border: 2px solid transparent;
+      box-shadow: inset 0 0 0 1px #1a1818;
+      outline: none;
+      transition: --gradient-angle-offset 800ms cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s;
+      cursor: pointer;
+      isolation: isolate;
+      z-index: 0;
+      animation: border-spin 2.5s linear infinite;
+    }
+    @keyframes border-spin {
+      to { --gradient-angle: 360deg; }
+    }
+    .shiny-cta:active { transform: translateY(1px);}
+    .shiny-cta::before {
+      content: '';
+      pointer-events: none;
+      position: absolute;
+      left: 50%; top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+      width: calc(100% - 6px);
+      height: calc(100% - 6px);
+      background: radial-gradient(circle at 2px 2px, white 0.5px, transparent 0) padding-box;
+      background-size: 4px 4px;
+      background-repeat: space;
+      mask-image: conic-gradient(from calc(var(--gradient-angle) + 45deg), black, transparent 10% 90%, black);
+      border-radius: inherit;
+      opacity: 0.4;
+    }
+    .shiny-cta::after {
+      content: '';
+      pointer-events: none;
+      position: absolute;
+      left: 50%; top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      width: 100%; aspect-ratio: 1;
+      background: linear-gradient(-50deg, transparent, #6366f1, transparent);
+      mask-image: radial-gradient(circle at bottom, transparent 40%, black);
+      opacity: 0.6;
+      animation: shimmer 4s linear infinite;
+      animation-play-state: running;
+    }
+    @keyframes shimmer {
+      to { transform: translate(-50%, -50%) rotate(360deg);}
+    }
+    #nav-anim, #cards-anim, #hero-anim { opacity: 0; filter: blur(16px); transform: translateY(2rem);}
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Serif:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500;600;700&family=Inter&display=swap" rel="stylesheet">
+</head>
+<body class="min-h-screen spotlight-bg flex flex-col relative overflow-x-hidden">
+  <!-- Navigation Bar -->
+  <nav id="nav-anim" class="w-full relative z-20 py-6 px-6 lg:px-12 flex items-center justify-between">
+    <div class="flex flex-1 items-center min-w-0">
+      <a href="#" class="flex items-center space-x-2 select-none">
+        <span class="text-lg font-semibold tracking-tight text-white ml-2">DesignCode</span>
+      </a>
+    </div>
+    <div class="flex flex-1 justify-center">
+      <ul class="hidden md:flex space-x-8 text-sm text-slate-200 font-medium">
+        <li><a href="#" class="hover:text-white transition">Courses</a></li>
+        <li><a href="#" class="hover:text-white transition">Community</a></li>
+        <li><a href="#" class="hover:text-white transition">Resources</a></li>
+      </ul>
+    </div>
+    <div class="flex flex-1 items-center justify-end space-x-4">
+      <a href="#" class="px-5 py-2 rounded-lg border border-slate-600 text-slate-100 bg-white/5 font-medium text-sm hover:bg-white/10 transition shadow-sm">Sign In</a>
+      <a href="#" class="px-5 py-2 rounded-lg font-medium text-sm text-white bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-600 glow hover:brightness-110 transition shadow-lg">Get Started</a>
+    </div>
+  </nav>
+
+  <!-- Spotlight effect -->
+  <div aria-hidden="true" class="pointer-events-none absolute inset-0 flex items-center justify-center z-0">
+    <div class="w-[900px] h-[450px] rounded-full bg-gradient-radial from-indigo-400/30 via-purple-500/10 to-transparent blur-3xl opacity-70"></div>
+  </div>
+
+  <!-- Main Content Cards First -->
+  <main class="relative z-10 flex flex-col flex-1 pt-0 pb-20 items-center justify-center">
+    <div id="cards-anim" class="relative flex h-[400px] sm:h-[430px] mt-10 items-center justify-center">
+      <!-- Spotlight and Streaks behind central card -->
+      <div class="pointer-events-none absolute left-1/2 top-1/2 z-40 -translate-x-1/2 -translate-y-1/2 w-[510px] h-[320px] sm:w-[570px] sm:h-[370px]">
+        <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[420px] h-[180px] rounded-full bg-gradient-radial from-purple-400/40 via-indigo-500/20 to-transparent blur-2xl opacity-80"></div>
+        <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-[180px] bg-gradient-to-b from-white/60 via-indigo-400/40 to-transparent blur-2xl opacity-50 rotate-[14deg]"></div>
+        <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-14 h-[120px] bg-gradient-to-tr from-purple-400/60 via-white/20 to-transparent blur-2xl opacity-40 -rotate-[23deg]"></div>
+        <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-[100px] bg-gradient-to-br from-indigo-300/40 via-white/10 to-transparent blur-2xl opacity-40 rotate-[28deg]"></div>
+        <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[230px] ring-2 ring-indigo-400/20 rounded-2xl blur-md opacity-70"></div>
+      </div>
+      <!-- Overlapping Cards -->
+      <div class="relative z-50 flex flex-row items-start justify-center w-full md:w-[1200px] md:flex-nowrap md:items-center md:justify-center md:h-[270px]">
+        <!-- Left Certificate -->
+        <div tabindex="0" class="relative z-10 card-tilt card-glass w-[380px] h-[240px] flex flex-col select-none overflow-hidden bg-[url(https://images.unsplash.com/photo-1579546929556-bf8352f5889c?w=1080&q=80)] bg-cover border-0 rounded-2xl pt-5 pr-5 pb-5 pl-5 shadow-xl hidden md:flex translate-x-12" style="transform: rotate(-20deg) translateX(48px); z-index: 10;">
+          <div class="flex mb-5 items-center justify-between">
+            <span class="text-xs uppercase font-medium tracking-wider text-white/90">Certificate</span>
+            <svg data-lucide="award" class="lucide lucide-award w-5 h-5 text-white/80"></svg>
+          </div>
+          <div class="flex items-center mt-0 mb-5 space-x-2">
+            <img src="https://randomuser.me/api/portraits/women/43.jpg" class="w-8 h-8 rounded-full object-cover border border-white/50" alt="Jane Doe">
+            <div>
+              <span class="block text-white text-base font-semibold tracking-tight">Jane Doe</span>
+              <span class="block text-xs text-white/80">UI Designer</span>
+            </div>
+          </div>
+          <div class="mt-0 mb-4">
+            <span class="block text-white text-lg font-semibold tracking-tight leading-tight">UI Design Basics</span>
+          </div>
+          <div class="flex flex-wrap gap-1 mt-0 mb-5">
+            <span class="bg-white/20 text-white/90 text-xs px-2 py-0.5 rounded font-medium">Figma</span>
+            <span class="bg-white/20 text-white/90 text-xs px-2 py-0.5 rounded font-medium">Wireframing</span>
+            <span class="bg-white/20 text-white/90 text-xs px-2 py-0.5 rounded font-medium">Prototyping</span>
+          </div>
+          <div class="flex items-center justify-between mt-0 mb-5">
+            <span class="text-xs text-white/80 flex items-center gap-1"><svg data-lucide="clock" class="lucide lucide-clock w-3.5 h-3.5 inline-block text-white/70"></svg>8h 30m</span>
+            <span class="bg-gradient-to-r from-indigo-400 to-purple-500 text-xs text-white font-medium px-2 py-0.5 rounded-full shadow">Certified</span>
+          </div>
+          <div class="flex items-center justify-between mt-0">
+            <div class="flex items-center gap-2">
+              <svg data-lucide="star" class="lucide lucide-star w-4 h-4 text-yellow-300/90"></svg>
+              <span class="text-xs text-yellow-100 font-medium truncate">Level 2 - Specialist</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs text-white/70">
+              <svg data-lucide="calendar" class="lucide lucide-calendar w-3.5 h-3.5 text-white/70"></svg>20 Mar 2024
+            </div>
+          </div>
+        </div>
+        <!-- Center Certificate -->
+        <div tabindex="0" class="relative z-20 card-tilt card-glass w-[380px] h-[240px] flex flex-col select-none overflow-hidden bg-[url(https://images.unsplash.com/photo-1635776063043-ab23b4c226f6?w=1080&q=80)] bg-cover border-0 rounded-2xl pt-6 pr-6 pb-6 pl-6 shadow-2xl mx-auto" style="transform: rotate(-20deg); z-index: 20;">
+          <div class="flex items-center justify-between mb-5">
+            <span class="text-xs uppercase font-semibold tracking-wider text-white/90">Certificate</span>
+            <svg data-lucide="code" class="lucide lucide-code w-5 h-5 text-white/80"></svg>
+          </div>
+          <div class="flex items-center mt-0 mb-5 space-x-2">
+            <img src="https://randomuser.me/api/portraits/women/43.jpg" class="w-9 h-9 rounded-full object-cover border border-white/50" alt="Jane Doe">
+            <div>
+              <span class="block text-white text-lg font-semibold tracking-tight">Jane Doe</span>
+              <span class="block text-xs text-white/80">Frontend Developer</span>
+            </div>
+          </div>
+          <div class="mt-0 mb-4">
+            <span class="block text-white text-xl font-semibold tracking-tight leading-tight">Advanced JavaScript</span>
+          </div>
+          <div class="flex flex-wrap gap-1 mt-0 mb-5">
+            <span class="bg-white/20 text-white/90 text-xs px-2 py-0.5 rounded font-medium">ES6+</span>
+            <span class="bg-white/20 text-white/90 text-xs px-2 py-0.5 rounded font-medium">React</span>
+            <span class="bg-white/20 text-white/90 text-xs px-2 py-0.5 rounded font-medium">Async</span>
+          </div>
+          <div class="flex items-center justify-between mt-0 mb-5">
+            <span class="text-xs text-white/80 flex items-center gap-1"><svg data-lucide="clock" class="lucide lucide-clock w-3.5 h-3.5 inline-block text-white/70"></svg>12h 10m</span>
+            <span class="text-xs font-medium text-slate-950 bg-slate-50 rounded-full pt-0.5 pr-2 pb-0.5 pl-2 shadow">Distinction</span>
+          </div>
+          <div class="flex items-center justify-between mt-0">
+            <div class="flex items-center gap-2">
+              <svg data-lucide="zap" class="lucide lucide-zap w-4 h-4 text-purple-200/90"></svg>
+              <span class="text-xs text-purple-100 font-medium truncate">Level 3 - Expert</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs text-white/70">
+              <svg data-lucide="calendar" class="lucide lucide-calendar w-3.5 h-3.5 text-white/70"></svg>5 Feb 2024
+            </div>
+          </div>
+        </div>
+        <!-- Right Certificate -->
+        <div tabindex="0" class="relative card-tilt card-glass w-[380px] h-[240px] flex flex-col select-none overflow-hidden bg-[url(https://images.unsplash.com/photo-1614853316476-de00d14cb1fc?w=1080&q=80)] bg-cover border-0 rounded-2xl pt-5 pr-5 pb-5 pl-5 shadow-lg hidden md:flex -translate-x-12" style="transform: rotate(-20deg) translateX(-48px); z-index: 30;">
+          <div class="flex items-center justify-between mb-5">
+            <span class="text-xs uppercase font-medium tracking-wider text-white/90">Certificate</span>
+            <svg data-lucide="palette" class="lucide lucide-palette w-5 h-5 text-white/80"></svg>
+          </div>
+          <div class="flex mt-0 mb-5 space-x-2 items-center">
+            <img src="https://randomuser.me/api/portraits/women/43.jpg" class="w-8 h-8 rounded-full object-cover border border-white/50" alt="Jane Doe">
+            <div>
+              <span class="block text-white text-base font-semibold tracking-tight">Jane Doe</span>
+              <span class="block text-xs text-white/80">Creative Coder</span>
+            </div>
+          </div>
+          <div class="mt-0 mb-4">
+            <span class="block leading-tight text-lg font-semibold text-white tracking-tight">Creative Coding</span>
+          </div>
+          <div class="flex flex-wrap gap-1 mt-0 mb-5">
+            <span class="bg-white/20 text-white/90 text-xs px-2 py-0.5 rounded font-medium">Canvas</span>
+            <span class="bg-white/20 text-white/90 text-xs px-2 py-0.5 rounded font-medium">Generative Art</span>
+            <span class="bg-white/20 text-white/90 text-xs px-2 py-0.5 rounded font-medium">Animation</span>
+          </div>
+          <div class="flex items-center justify-between mt-0 mb-5">
+            <span class="text-xs text-white/80 flex items-center gap-1"><svg data-lucide="clock" class="lucide lucide-clock w-3.5 h-3.5 inline-block text-white/70"></svg>9h 55m</span>
+            <span class="bg-gradient-to-r from-purple-500 to-indigo-400 text-xs text-white font-medium px-2 py-0.5 rounded-full shadow">Certified</span>
+          </div>
+          <div class="flex items-center justify-between mt-0">
+            <div class="flex items-center gap-2">
+              <svg data-lucide="brush" class="lucide lucide-brush w-4 h-4 text-purple-200"></svg>
+              <span class="text-xs text-purple-100 font-medium truncate">Level 1 - Creator</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs text-white/70">
+              <svg data-lucide="calendar" class="lucide lucide-calendar w-3.5 h-3.5 text-white/70"></svg>18 Jan 2024
+            </div>
+          </div>
+        </div>
+        <!-- On mobile, show cards stacked -->
+        <div class="flex flex-col space-y-4 w-full md:hidden">
+          <div class="card-tilt card-glass w-full h-[220px] flex flex-col select-none overflow-hidden bg-[url(https://images.unsplash.com/photo-1635776063043-ab23b4c226f6?w=1080&q=80)] bg-cover border-0 rounded-2xl p-5 shadow-xl">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs uppercase font-semibold tracking-wider text-white/90">Certificate</span>
+              <svg data-lucide="code" class="lucide lucide-code w-5 h-5 text-white/80"></svg>
+            </div>
+            <div class="flex items-center mb-4 space-x-2">
+              <img src="https://randomuser.me/api/portraits/women/43.jpg" class="w-8 h-8 rounded-full object-cover border border-white/50" alt="Jane Doe">
+              <div>
+                <span class="block text-white text-base font-semibold tracking-tight">Jane Doe</span>
+                <span class="block text-xs text-white/80">Frontend Developer</span>
+              </div>
+            </div>
+            <span class="block text-white text-lg font-semibold tracking-tight leading-tight mb-2">Advanced JavaScript</span>
+            <div class="flex flex-wrap gap-1 mb-3">
+              <span class="bg-white/20 text-white/90 text-xs px-2 py-0.5 rounded font-medium">ES6+</span>
+              <span class="bg-white/20 text-white/90 text-xs px-2 py-0.5 rounded font-medium">React</span>
+              <span class="bg-white/20 text-white/90 text-xs px-2 py-0.5 rounded font-medium">Async</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-xs text-white/80 flex items-center gap-1"><svg data-lucide="clock" class="lucide lucide-clock w-3.5 h-3.5 inline-block text-white/70"></svg>12h 10m</span>
+              <span class="text-xs font-medium text-slate-950 bg-slate-50 rounded-full pt-0.5 pr-2 pb-0.5 pl-2 shadow">Distinction</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Text & CTA at the bottom of cards -->
+    <div id="hero-anim" class="relative z-10 max-w-2xl sm:mt-12 md:mt-10 mt-14 mr-auto ml-auto pr-5 pl-5">
+      <h1 class="sm:text-4xl md:text-5xl text-4xl font-satoshi-semibold tracking-tight leading-tight text-white text-center mb-3 drop-shadow-lg">
+        Level Up Your Design and Code Skills
+      </h1>
+      <p class="text-lg text-slate-200/90 tracking-tight text-center mb-5">Learn design and code from world-class instructors. Earn real certificates, join a vibrant community, and transform your career.</p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <!-- Shiny CTA Button -->
+        <button class="shiny-cta focus:outline-none">
+          <span>Start Learning Now</span>
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Animate in sequence: nav, cards, hero
+    window.addEventListener('DOMContentLoaded', () => {
+      const steps = [
+        { selector: '#nav-anim', delay: 0 },
+        { selector: '#cards-anim', delay: 350 },
+        { selector: '#hero-anim', delay: 700 },
+      ];
+      steps.forEach(({selector, delay}) => {
+        setTimeout(() => {
+          const el = document.querySelector(selector);
+          if (el) {
+            el.classList.add('animate-in');
+            el.classList.remove('opacity-0', 'blur-md', 'translate-y-8');
+          }
+        }, delay);
+      });
+
+      // Card Tilt Effect
+      function clamp(num, min, max) { return Math.max(min, Math.min(num, max)); }
+      document.querySelectorAll('.card-tilt').forEach(card => {
+        let initialTransform = card.style.transform;
+        card.addEventListener('pointermove', e => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+          const maxTilt = 13;
+          const tiltX = clamp(((y - centerY) / centerY) * maxTilt, -maxTilt, maxTilt);
+          const tiltY = clamp(((x - centerX) / centerX) * -maxTilt, -maxTilt, maxTilt);
+          card.style.transition = 'transform 0.12s cubic-bezier(.22,1,.36,1)';
+          card.style.transform = `${initialTransform} scale(1.045) perspective(800px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+        });
+        card.addEventListener('pointerleave', () => {
+          card.style.transition = 'transform 0.35s cubic-bezier(.22,1,.36,1)';
+          card.style.transform = initialTransform;
+        });
+        card.addEventListener('pointerenter', () => {
+          card.style.transition = 'transform 0.18s cubic-bezier(.22,1,.36,1)';
+        });
+        card.addEventListener('focus', () => {
+          card.style.transition = 'transform 0.15s cubic-bezier(.22,1,.36,1)';
+          card.style.transform = `${initialTransform} scale(1.045)`;
+        });
+        card.addEventListener('blur', () => {
+          card.style.transition = 'transform 0.35s cubic-bezier(.22,1,.36,1)';
+          card.style.transform = initialTransform;
+        });
+      });
+      if (window.lucide) lucide.createIcons();
+    });
+  </script>
+</body>
+</html>

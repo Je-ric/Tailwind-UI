@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mesh Gradient Editor</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          boxShadow: {
+            'elegant': '0px 0px 0px 1px rgba(0,0,0,0.06),0px 1px 1px -0.5px rgba(0,0,0,0.06),0px 3px 3px -1.5px rgba(0,0,0,0.06),0px 6px 6px -3px rgba(0,0,0,0.06),0px 12px 12px -6px rgba(0,0,0,0.06),0px 24px 24px -12px rgba(0,0,0,0.06)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    input[type="range"] {
+      -webkit-appearance: none;
+      appearance: none;
+      height: 4px;
+      background: #e5e7eb;
+      border-radius: 4px;
+      outline: none;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 12px;
+      height: 12px;
+      background: white;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      border: 1px solid rgba(0,0,0,0.1);
+    }
+    input[type="range"]::-moz-range-thumb {
+      width: 12px;
+      height: 12px;
+      background: white;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      border: 1px solid rgba(0,0,0,0.1);
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const c = [0,1,2,3].map(i => document.getElementById(`c${i}`));
+      const x = [0,1,2,3].map(i => document.getElementById(`x${i}`));
+      const y = [0,1,2,3].map(i => document.getElementById(`y${i}`));
+      const s = [0,1,2,3].map(i => document.getElementById(`s${i}`));
+      const bg = document.getElementById("bg");
+      
+      function update() {
+        bg.style.background = [0,1,2,3].map(i => 
+          `radial-gradient(circle at ${x[i].value}% ${y[i].value}%, ${c[i].value} ${s[i].value}%, transparent 70%)`
+        ).join(",");
+      }
+      
+      function randomizeColors() {
+        c.forEach(input => {
+          input.value = '#' + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0');
+        });
+        update();
+      }
+      
+      function randomizeAll() {
+        randomizeColors();
+        x.forEach(input => {
+          input.value = Math.floor(Math.random() * 101);
+        });
+        y.forEach(input => {
+          input.value = Math.floor(Math.random() * 101);
+        });
+        s.forEach(input => {
+          input.value = Math.floor(Math.random() * 61) + 10;
+        });
+        update();
+      }
+      
+      document.getElementById("randomColors").addEventListener("click", randomizeColors);
+      document.getElementById("randomAll").addEventListener("click", randomizeAll);
+      
+      [...c, ...x, ...y, ...s].forEach(el => el.addEventListener("input", update));
+      update();
+    });
+  </script>
+</head>
+<body class="h-screen overflow-hidden bg-gray-50">
+  <div id="bg" class="fixed inset-0 -z-10"></div>
+  
+  <div class="fixed top-4 right-4 bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-elegant max-w-xs">
+    <div class="grid gap-3">
+      <div class="flex items-center gap-2">
+        <span class="text-xs font-medium w-4 text-center text-gray-500">1</span>
+        <input id="c0" type="color" value="#80deea" class="w-7 h-7 p-0 border-0 rounded-full overflow-hidden">
+        <div class="grid grid-cols-3 gap-2">
+          <div class="flex flex-col items-center">
+            <span class="text-[10px] text-gray-400 mb-1 font-medium">X</span>
+            <input id="x0" type="range" min="0" max="100" value="0" class="w-14">
+          </div>
+          <div class="flex flex-col items-center">
+            <span class="text-[10px] text-gray-400 mb-1 font-medium">Y</span>
+            <input id="y0" type="range" min="0" max="100" value="0" class="w-14">
+          </div>
+          <div class="flex flex-col items-center">
+            <span class="text-[10px] text-gray-400 mb-1 font-medium">Size</span>
+            <input id="s0" type="range" min="10" max="70" value="25" class="w-14">
+          </div>
+        </div>
+      </div>
+      
+      <div class="flex items-center gap-2">
+        <span class="text-xs font-medium w-4 text-center text-gray-500">2</span>
+        <input id="c1" type="color" value="#ffab91" class="w-7 h-7 p-0 border-0 rounded-full overflow-hidden">
+        <div class="grid grid-cols-3 gap-2">
+          <div class="flex flex-col items-center">
+            <span class="text-[10px] text-gray-400 mb-1 font-medium">X</span>
+            <input id="x1" type="range" min="0" max="100" value="0" class="w-14">
+          </div>
+          <div class="flex flex-col items-center">
+            <span class="text-[10px] text-gray-400 mb-1 font-medium">Y</span>
+            <input id="y1" type="range" min="0" max="100" value="100" class="w-14">
+          </div>
+          <div class="flex flex-col items-center">
+            <span class="text-[10px] text-gray-400 mb-1 font-medium">Size</span>
+            <input id="s1" type="range" min="10" max="70" value="25" class="w-14">
+          </div>
+        </div>
+      </div>
+      
+      <div class="flex items-center gap-2">
+        <span class="text-xs font-medium w-4 text-center text-gray-500">3</span>
+        <input id="c2" type="color" value="#8cdbbf" class="w-7 h-7 p-0 border-0 rounded-full overflow-hidden">
+        <div class="grid grid-cols-3 gap-2">
+          <div class="flex flex-col items-center">
+            <span class="text-[10px] text-gray-400 mb-1 font-medium">X</span>
+            <input id="x2" type="range" min="0" max="100" value="50" class="w-14">
+          </div>
+          <div class="flex flex-col items-center">
+            <span class="text-[10px] text-gray-400 mb-1 font-medium">Y</span>
+            <input id="y2" type="range" min="0" max="100" value="0" class="w-14">
+          </div>
+          <div class="flex flex-col items-center">
+            <span class="text-[10px] text-gray-400 mb-1 font-medium">Size</span>
+            <input id="s2" type="range" min="10" max="70" value="25" class="w-14">
+          </div>
+        </div>
+      </div>
+      
+      <div class="flex items-center gap-2">
+        <span class="text-xs font-medium w-4 text-center text-gray-500">4</span>
+        <input id="c3" type="color" value="#b4d195" class="w-7 h-7 p-0 border-0 rounded-full overflow-hidden">
+        <div class="grid grid-cols-3 gap-2">
+          <div class="flex flex-col items-center">
+            <span class="text-[10px] text-gray-400 mb-1 font-medium">X</span>
+            <input id="x3" type="range" min="0" max="100" value="50" class="w-14">
+          </div>
+          <div class="flex flex-col items-center">
+            <span class="text-[10px] text-gray-400 mb-1 font-medium">Y</span>
+            <input id="y3" type="range" min="0" max="100" value="100" class="w-14">
+          </div>
+          <div class="flex flex-col items-center">
+            <span class="text-[10px] text-gray-400 mb-1 font-medium">Size</span>
+            <input id="s3" type="range" min="10" max="70" value="25" class="w-14">
+          </div>
+        </div>
+      </div>
+      
+      <div class="flex gap-2 mt-1">
+        <button id="randomColors" class="bg-white text-gray-700 text-xs py-2 px-3 rounded-lg flex-1 transition-colors shadow-elegant hover:bg-gray-50 font-medium">
+          Random Colors
+        </button>
+        <button id="randomAll" class="bg-white text-gray-700 text-xs py-2 px-3 rounded-lg flex-1 transition-colors shadow-elegant hover:bg-gray-50 font-medium">
+          Random All
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolix - Skills & Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(
+                125deg,
+                #ff7eb3 0%,
+                #ff9e80 25%,
+                #b388ff 50%,
+                #8c9eff 75%,
+                #82b1ff 100%
+            );
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .floating {
+            animation: floating 6s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .blob {
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            animation: blob-animation 15s ease-in-out infinite;
+        }
+        
+        @keyframes blob-animation {
+            0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+            25% { border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%; }
+            50% { border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%; }
+            75% { border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%; }
+            100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+        }
+        
+        .icon-container {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover .icon-container {
+            transform: scale(1.1);
+        }
+        
+        .tool-tag {
+            transition: all 0.2s ease;
+        }
+        
+        .card-hover:hover .tool-tag {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800 overflow-x-hidden">
+    <!-- Animated Background -->
+    <div class="fixed inset-0 -z-10 gradient-bg opacity-20"></div>
+    
+    <!-- Animated Blobs -->
+    <div class="fixed top-20 left-20 w-96 h-96 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 blob -z-10"></div>
+    <div class="fixed top-40 right-20 w-96 h-96 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 blob -z-10" style="animation-delay: 2s;"></div>
+    <div class="fixed -bottom-20 left-40 w-96 h-96 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 blob -z-10" style="animation-delay: 4s;"></div>
+    
+    <!-- Header -->
+    <header class="w-full backdrop-blur-md bg-white/70 fixed top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-r from-pink-500 to-orange-400 flex items-center justify-center text-white font-bold text-xl">P</div>
+                    <span class="ml-2 text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-orange-400">Portfolix</span>
+                </div>
+                
+                <!-- Navigation -->
+                <nav class="hidden md:flex">
+                    <a href="#" class="px-3 py-2 text-gray-600 hover:text-pink-500 transition-colors">Home</a>
+                    <a href="#" class="px-3 py-2 text-gray-600 hover:text-pink-500 transition-colors">About</a>
+                    <a href="#" class="px-3 py-2 text-pink-500 border-b-2 border-pink-500">Services</a>
+                    <a href="#" class="px-3 py-2 text-gray-600 hover:text-pink-500 transition-colors">Portfolio</a>
+                    <a href="#" class="px-3 py-2 text-gray-600 hover:text-pink-500 transition-colors">Contact</a>
+                </nav>
+                
+                <!-- Auth Buttons -->
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="px-4 py-2 bg-gradient-to-r from-pink-500 to-orange-400 text-white font-medium rounded-lg shadow-md hover:shadow-lg transition-all duration-200">Contact Me</a>
+                    <button class="md:hidden text-gray-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Skills & Services Section -->
+    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+            <div class="inline-block px-3 py-1 bg-gradient-to-r from-pink-500/10 to-orange-400/10 rounded-full mb-4">
+                <span class="text-sm font-medium text-pink-700">What I Offer</span>
+            </div>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 leading-tight">
+                My <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-orange-400">Skills & Services</span>
+            </h2>
+            <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-600">
+                Bringing your creative vision to life with professional expertise across multiple disciplines
+            </p>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Branding Card -->
+            <div class="relative group card-hover rounded-2xl shadow-lg overflow-hidden bg-white border border-gray-100 p-8">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-pink-200/40 to-pink-200/0 rounded-bl-full"></div>
+                <div class="icon-container bg-gradient-to-r from-pink-500 to-pink-400 w-16 h-16 rounded-xl flex items-center justify-center mb-6 shadow-md">
+                    <i data-feather="award" class="text-white w-8 h-8"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Branding</h3>
+                <p class="text-gray-600 mb-6">Creating memorable brand identities that capture your essence and resonate with your audience.</p>
+                <div class="flex flex-wrap gap-2 mt-4">
+                    <span class="tool-tag px-3 py-1 bg-pink-100 text-pink-700 rounded-full text-xs font-medium">Logo Design</span>
+                    <span class="tool-tag px-3 py-1 bg-pink-100 text-pink-700 rounded-full text-xs font-medium">Brand Strategy</span>
+                    <span class="tool-tag px-3 py-1 bg-pink-100 text-pink-700 rounded-full text-xs font-medium">Visual Identity</span>
+                </div>
+            </div>
+
+            <!-- UI Design Card -->
+            <div class="relative group card-hover rounded-2xl shadow-lg overflow-hidden bg-white border border-gray-100 p-8">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-purple-200/40 to-purple-200/0 rounded-bl-full"></div>
+                <div class="icon-container bg-gradient-to-r from-purple-500 to-purple-400 w-16 h-16 rounded-xl flex items-center justify-center mb-6 shadow-md">
+                    <i data-feather="layout" class="text-white w-8 h-8"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">UI Design</h3>
+                <p class="text-gray-600 mb-6">Crafting intuitive and visually stunning interfaces that enhance user experience and engagement.</p>
+                <div class="flex flex-wrap gap-2 mt-4">
+                    <span class="tool-tag px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-medium">Figma</span>
+                    <span class="tool-tag px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-medium">Sketch</span>
+                    <span class="tool-tag px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-medium">Adobe XD</span>
+                </div>
+            </div>
+
+            <!-- Video Editing Card -->
+            <div class="relative group card-hover rounded-2xl shadow-lg overflow-hidden bg-white border border-gray-100 p-8">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-orange-200/40 to-orange-200/0 rounded-bl-full"></div>
+                <div class="icon-container bg-gradient-to-r from-orange-500 to-orange-400 w-16 h-16 rounded-xl flex items-center justify-center mb-6 shadow-md">
+                    <i data-feather="film" class="text-white w-8 h-8"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Video Editing</h3>
+                <p class="text-gray-600 mb-6">Transforming raw footage into compelling stories with professional editing and visual effects.</p>
+                <div class="flex flex-wrap gap-2 mt-4">
+                    <span class="tool-tag px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-medium">Premiere Pro</span>
+                    <span class="tool-tag px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-medium">DaVinci Resolve</span>
+                    <span class="tool-tag px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-medium">After Effects</span>
+                </div>
+            </div>
+
+            <!-- Photography Card -->
+            <div class="relative group card-hover rounded-2xl shadow-lg overflow-hidden bg-white border border-gray-100 p-8">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-blue-200/40 to-blue-200/0 rounded-bl-full"></div>
+                <div class="icon-container bg-gradient-to-r from-blue-500 to-blue-400 w-16 h-16 rounded-xl flex items-center justify-center mb-6 shadow-md">
+                    <i data-feather="camera" class="text-white w-8 h-8"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Photography</h3>
+                <p class="text-gray-600 mb-6">Capturing moments and emotions through the lens with artistic vision and technical expertise.</p>
+                <div class="flex flex-wrap gap-2 mt-4">
+                    <span class="tool-tag px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-medium">Lightroom</span>
+                    <span class="tool-tag px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-medium">Photoshop</span>
+                    <span class="tool-tag px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-medium">Capture One</span>
+                </div>
+            </div>
+
+            <!-- 3D Modeling Card -->
+            <div class="relative group card-hover rounded-2xl shadow-lg overflow-hidden bg-white border border-gray-100 p-8">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-green-200/40 to-green-200/0 rounded-bl-full"></div>
+                <div class="icon-container bg-gradient-to-r from-green-500 to-green-400 w-16 h-16 rounded-xl flex items-center justify-center mb-6 shadow-md">
+                    <i data-feather="box" class="text-white w-8 h-8"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">3D Modeling</h3>
+                <p class="text-gray-600 mb-6">Creating immersive three-dimensional assets and environments for various digital applications.</p>
+                <div class="flex flex-wrap gap-2 mt-4">
+                    <span class="tool-tag px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-medium">Blender</span>
+                    <span class="tool-tag px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-medium">Cinema 4D</span>
+                    <span class="tool-tag px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-medium">Maya</span>
+                </div>
+            </div>
+
+            <!-- Motion Graphics Card -->
+            <div class="relative group card-hover rounded-2xl shadow-lg overflow-hidden bg-white border border-gray-100 p-8">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-red-200/40 to-red-200/0 rounded-bl-full"></div>
+                <div class="icon-container bg-gradient-to-r from-red-500 to-red-400 w-16 h-16 rounded-xl flex items-center justify-center mb-6 shadow-md">
+                    <i data-feather="activity" class="text-white w-8 h-8"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Motion Graphics</h3>
+                <p class="text-gray-600 mb-6">Bringing static designs to life with dynamic animations and engaging visual storytelling.</p>
+                <div class="flex flex-wrap gap-2 mt-4">
+                    <span class="tool-tag px-3 py-1 bg-red-100 text-red-700 rounded-full text-xs font-medium">After Effects</span>
+                    <span class="tool-tag px-3 py-1 bg-red-100 text-red-700 rounded-full text-xs font-medium">Lottie</span>
+                    <span class="tool-tag px-3 py-1 bg-red-100 text-red-700 rounded-full text-xs font-medium">Principle</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="mt-20 text-center">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Ready to bring your project to life?</h3>
+            <p class="text-gray-600 mb-8 max-w-2xl mx-auto">Let's collaborate and create something extraordinary together.</p>
+            <a href="#" class="px-8 py-3 bg-gradient-to-r from-pink-500 to-orange-400 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 inline-block">
+                Get in Touch
+            </a>
+        </div>
+    </section>
+
+    <script>
+        // Initialize Feather icons
+        document.addEventListener('DOMContentLoaded', function() {
+            feather.replace();
+        });
+    </script>
+</body>
+</html>

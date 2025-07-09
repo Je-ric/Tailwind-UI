@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iridescent Shader Background</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module">
+        import { Renderer, Program, Mesh, Color, Triangle } from 'https://cdn.skypack.dev/ogl';
+
+        const vertexShader = `
+        attribute vec2 uv;
+        attribute vec2 position;
+        varying vec2 vUv;
+        void main() {
+          vUv = uv;
+          gl_Position = vec4(position, 0, 1);
+        }`;
+
+        const fragmentShader = `
+        precision highp float;
+        uniform float uTime;
+        uniform vec3 uColor;
+        uniform vec3 uResolution;
+        uniform vec2 uMouse;
+        uniform float uAmplitude;
+        uniform float uSpeed;
+        varying vec2 vUv;
+        void main() {
+          float mr = min(uResolution.x, uResolution.y);
+          vec2 uv = (vUv.xy * 2.0 - 1.0) * uResolution.xy / mr;
+          uv += (uMouse - vec2(0.5)) * uAmplitude;
+          float d = -uTime * 0.5 * uSpeed;
+          float a = 0.0;
+          for (float i = 0.0; i < 8.0; ++i) {
+            a += cos(i - d - a * uv.x);
+            d += sin(uv.y * i + a);
+          }
+          d += uTime * 0.5 * uSpeed;
+          vec3 col = vec3(cos(uv * vec2(d, a)) * 0.6 + 0.4, cos(a + d) * 0.5 + 0.5);
+          col = cos(col * cos(vec3(d, a, 2.5)) * 0.5 + 0.5) * uColor;
+          gl_FragColor = vec4(col, 1.0);
+        }`;
+
+        class IridescenceShader {
+            constructor(container, options = {}) {
+                this.container = container;
+                this.color = options.color || [1, 0.8, 0.9];
+                this.speed = options.speed || 1.0;
+                this.amplitude = options.amplitude || 0.15;
+                this.mouseReact = options.mouseReact !== false;
+                this.mousePos = { x: 0.5, y: 0.5 };
+                this.init();
+            }
+
+            init() {
+                this.renderer = new Renderer();
+                this.gl = this.renderer.gl;
+                this.gl.clearColor(0, 0, 0, 1);
+                
+                this.setupGeometry();
+                this.setupEventListeners();
+                this.resize();
+                this.animate();
+                
+                this.container.appendChild(this.gl.canvas);
+            }
+
+            setupGeometry() {
+                const geometry = new Triangle(this.gl);
+                this.program = new Program(this.gl, {
+                    vertex: vertexShader,
+                    fragment: fragmentShader,
+                    uniforms: {
+                        uTime: { value: 0 },
+                        uColor: { value: new Color(...this.color) },
+                        uResolution: { value: new Color(1, 1, 1) },
+                        uMouse: { value: new Float32Array([0.5, 0.5]) },
+                        uAmplitude: { value: this.amplitude },
+                        uSpeed: { value: this.speed },
+                    },
+                });
+                this.mesh = new Mesh(this.gl, { geometry, program: this.program });
+            }
+
+            setupEventListeners() {
+                this.handleResize = this.resize.bind(this);
+                this.handleMouseMove = this.onMouseMove.bind(this);
+                
+                window.addEventListener('resize', this.handleResize);
+                if (this.mouseReact) {
+                    this.container.addEventListener('mousemove', this.handleMouseMove);
+                }
+            }
+
+            resize() {
+                const rect = this.container.getBoundingClientRect();
+                this.renderer.setSize(rect.width, rect.height);
+                if (this.program) {
+                    this.program.uniforms.uResolution.value = new Color(
+                        this.gl.canvas.width,
+                        this.gl.canvas.height,
+                        this.gl.canvas.width / this.gl.canvas.height
+                    );
+                }
+            }
+
+            onMouseMove(e) {
+                const rect = this.container.getBoundingClientRect();
+                const x = (e.clientX - rect.left) / rect.width;
+                const y = 1.0 - (e.clientY - rect.top) / rect.height;
+                this.mousePos = { x, y };
+                this.program.uniforms.uMouse.value[0] = x;
+                this.program.uniforms.uMouse.value[1] = y;
+            }
+
+            animate(t = 0) {
+                this.animationId = requestAnimationFrame(this.animate.bind(this));
+                this.program.uniforms.uTime.value = t * 0.001;
+                this.renderer.render({ scene: this.mesh });
+            }
+
+            destroy() {
+                if (this.animationId) cancelAnimationFrame(this.animationId);
+                window.removeEventListener('resize', this.handleResize);
+                if (this.mouseReact) {
+                    this.container.removeEventListener('mousemove', this.handleMouseMove);
+                }
+                if (this.gl.canvas.parentNode) {
+                    this.gl.canvas.parentNode.removeChild(this.gl.canvas);
+                }
+                this.gl.getExtension('WEBGL_lose_context')?.loseContext();
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const containers = document.querySelectorAll('.shader-container');
+            
+            containers.forEach((container, index) => {
+                const colors = [
+                    [1, 0.5, 0.8],    // Pink-purple
+                    [0.3, 0.8, 1],    // Cyan-blue  
+                    [0.8, 1, 0.4],    // Green-yellow
+                ];
+                
+                new IridescenceShader(container, {
+                    color: colors[index % colors.length],
+                    speed: 0.8 + index * 0.3,
+                    amplitude: 0.1 + index * 0.05
+                });
+            });
+        });
+    </script>
+    <style>
+        .shader-container {
+            position: relative;
+            overflow: hidden;
+        }
+        .shader-container canvas {
+            width: 100% !important;
+            height: 100% !important;
+            display: block;
+        }
+    </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Serif:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Serif:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-black min-h-screen">
+    <div class="relative w-full h-screen">
+        <!-- Main large shader background -->
+        <div class="shader-container absolute inset-0"></div>
+        
+        <!-- Content overlay -->
+        <div class="relative z-10 flex flex-col items-center justify-center h-full text-white">
+            <div class="text-center space-y-8 px-4">
+                <h1 class="text-6xl md:text-8xl font-bold bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent">
+                    Iridescent
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 max-w-2xl">
+                    Move your mouse to interact with the flowing colors and watch the mesmerizing patterns dance across the screen
+                </p>
+                
+                <!-- Smaller shader previews -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 max-w-4xl">
+                    <div class="group">
+                        <div class="shader-container w-full h-48 rounded-xl overflow-hidden shadow-2xl transform transition-transform group-hover:scale-105"></div>
+                        <p class="mt-3 text-sm text-gray-400">Aurora Waves</p>
+                    </div>
+                    <div class="group">
+                        <div class="shader-container w-full h-48 rounded-xl overflow-hidden shadow-2xl transform transition-transform group-hover:scale-105"></div>
+                        <p class="mt-3 text-sm text-gray-400">Ocean Flow</p>
+                    </div>
+                    <div class="group">
+                        <div class="shader-container w-full h-48 rounded-xl overflow-hidden shadow-2xl transform transition-transform group-hover:scale-105"></div>
+                        <p class="mt-3 text-sm text-gray-400">Electric Dreams</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Credit attribution -->
+        <div class="absolute bottom-4 right-4 z-20">
+            <a href="https://www.reactbits.dev/backgrounds/iridescence" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               class="text-xs text-gray-400 hover:text-white transition-colors duration-200 bg-black/30 backdrop-blur-sm px-3 py-2 rounded-lg border border-gray-700/50">
+                Shader by ReactBits.dev
+            </a>
+        </div>
+    </div>
+</body>
+</html>

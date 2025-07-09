@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Gradient Background</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes gradientFlow {
+            0% { background-position: 0% 50%; }
+            25% { background-position: 100% 50%; }
+            50% { background-position: 100% 100%; }
+            75% { background-position: 0% 100%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        @keyframes blurSequence {
+            0% { filter: blur(0px); }
+            25% { filter: blur(5px); }
+            50% { filter: blur(10px); }
+            75% { filter: blur(5px); }
+            100% { filter: blur(0px); }
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateX(-100%); opacity: 0; }
+            100% { transform: translateX(0); opacity: 1; }
+        }
+        
+        .animated-gradient {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab, #667eea, #764ba2);
+            background-size: 400% 400%;
+            animation: gradientFlow 15s ease infinite, blurSequence 1.0s ease 0.5s 1;
+        }
+        
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .slide-animate {
+            animation: slideIn 0.4s ease-in-out 0.4s 1 both;
+        }
+
+        .slide-animate:nth-child(1) { animation-delay: 0.4s; }
+        .slide-animate:nth-child(2) { animation-delay: 0.8s; }
+        .slide-animate:nth-child(3) { animation-delay: 1.2s; }
+        .slide-animate:nth-child(4) { animation-delay: 1.6s; }
+        .slide-animate:nth-child(5) { animation-delay: 2.0s; }
+    </style>
+</head>
+<body class="animated-gradient min-h-screen flex items-center justify-center">
+    <div class="relative z-10 max-w-4xl mx-auto px-6">
+        <div class="glass-effect rounded-3xl p-12 text-center shadow-2xl slide-animate">
+            <h1 class="text-6xl font-bold text-white mb-6 drop-shadow-lg">
+                Dynamic Gradient
+            </h1>
+            <p class="text-xl text-white/90 mb-8 leading-relaxed">
+                Experience the mesmerizing flow of colors as they dance across your screen in perfect harmony.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-white/20 hover:bg-white/30 text-black font-semibold py-3 px-8 rounded-full transition-all duration-300 backdrop-blur-sm border border-white/30">
+                    Get Started
+                </button>
+                <button class="bg-transparent hover:bg-white/10 text-white font-semibold py-3 px-8 rounded-full border-2 border-white/50 transition-all duration-300">
+                    Learn More
+                </button>
+            </div>
+        </div>
+        
+        <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="glass-effect rounded-2xl p-6 text-center slide-animate">
+                <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-white font-semibold mb-2">Lightning Fast</h3>
+                <p class="text-white/80 text-sm">Optimized performance for smooth animations</p>
+            </div>
+            
+            <div class="glass-effect rounded-2xl p-6 text-center slide-animate">
+                <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-white font-semibold mb-2">Responsive Design</h3>
+                <p class="text-white/80 text-sm">Beautiful on every device and screen size</p>
+            </div>
+            
+            <div class="glass-effect rounded-2xl p-6 text-center slide-animate">
+                <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-white font-semibold mb-2">Made with Love</h3>
+                <p class="text-white/80 text-sm">Crafted with attention to every detail</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
