@@ -5,363 +5,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Education Timeline</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/education.css"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
   </head>
 
-  <body
-    class="min-h-screen bg-gray-200 font-[Oswald] text-gray-800 selection:bg-gray-700 selection:text-white"
-  >
-    <!-- wrapper -->
-    <div class="max-w-7xl mx-auto p-6">
-      <!-- section title -->
-      <h1
-        class="text-center text-4xl sm:text-5xl font-semibold tracking-tight text-gray-600 drop-shadow-md mb-14"
-      >
-        Educational&nbsp;Background
-      </h1>
+  <body class="min-h-screen bg-gray-200 font-[Oswald] text-gray-800 selection:bg-gray-700 selection:text-white">
 
-      <!-- main grid -->
-      <div class="grid lg:grid-cols-5 gap-10">
-        <!-- timeline cards -->
-        <div class="lg:col-span-4 grid sm:grid-cols-2 xl:grid-cols-4 gap-8">
-          <!-- reusable card component -->
-          <!-- COLLEGE -->
-          <div
-            class="flex flex-col items-center h-80 sm:h-96"
-            style="
-              animation: fadeUp 0.6s ease forwards;
-              animation-delay: 0.05s;
-              opacity: 0;
-            "
-          >
-            <!-- circle -->
-            <div
-              tabindex="0"
-              role="img"
-              aria-label="College level icon"
-              class="neumorphic mb-4 relative flex items-center justify-center"
-              data-shadow="9px 9px 16px #a3b1c6,-9px -9px 16px #ffffff"
-              data-shadow-hover="-2px -2px 6px rgba(255,255,255,.6),-2px -2px 4px rgba(255,255,255,.4),2px 2px 2px rgba(255,255,255,.05),2px 2px 4px rgba(0,0,0,.1)"
-              style="
-                width: 10rem;
-                height: 10rem;
-                border-radius: 9999px;
-                background: linear-gradient(135deg, #fc00ff, #00dbde);
-              "
-            >
-              <div
-                class="relative flex items-center justify-center bg-gray-200 rounded-full border border-white"
-                style="
-                  width: 8rem;
-                  height: 8rem;
-                  box-shadow: inset 5px 5px 10px #a3b1c6,
-                    inset -5px -5px 10px #ffffff;
-                "
-              >
-                <span
-                  class="text-center text-sm sm:text-base font-semibold text-gray-700 drop-shadow"
-                >
-                  College
-                </span>
+<div id="education-container" class="education-container px-4 md:px-8 lg:px-16 py-8">
+  <h1 class="neu-text text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8">Educational Background</h1>
+
+  <div class="timeline grid grid-cols-1 lg:grid-cols-[4fr_1fr] gap-6 lg:gap-8">
+    
+    <!-- LEFT TIMELINE -->
+    <div class="timeline-left flex flex-col gap-8">
+
+      <div class="timeline-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+
+        <!-- ONE: College -->
+        <div class="timeline-item flex flex-col justify-between text-center h-[380px]">
+          <div class="circle-div flex justify-center items-center">
+            <div class="circle c1">
+              <div class="inner-circle">
+                <span>College</span>
               </div>
             </div>
-
-            <!-- details -->
-            <div
-              class="flex-grow flex flex-col justify-center text-center space-y-4"
-            >
-              <p class="text-sm font-medium border-y-2 border-gray-600 py-1">
-                2022&nbsp;–&nbsp;Present
-              </p>
-              <ul class="text-sm space-y-1 text-left" role="list">
-                <li>• Junior – BSIT</li>
-                <li>• Sophomore – BSIT</li>
-                <li>• Freshman – BSIT</li>
-              </ul>
-            </div>
-
-            <!-- school -->
-            <p
-              class="mt-4 px-4 py-2 rounded-2xl text-sm font-medium bg-gray-200"
-              style="
-                box-shadow: 2px 2px 2px #cfcfcf inset, -2px -2px 2px #fff inset;
-              "
-            >
-              Central&nbsp;Luzon&nbsp;State&nbsp;University
-            </p>
           </div>
-
-          <!-- SHS -->
-          <div
-            class="flex flex-col items-center h-80 sm:h-96"
-            style="
-              animation: fadeUp 0.6s ease forwards;
-              animation-delay: 0.15s;
-              opacity: 0;
-            "
-          >
-            <div
-              tabindex="0"
-              role="img"
-              aria-label="Senior High School icon"
-              class="neumorphic mb-4 relative flex items-center justify-center"
-              data-shadow="9px 9px 16px #a3b1c6,-9px -9px 16px #ffffff"
-              data-shadow-hover="-2px -2px 6px rgba(255,255,255,.6),-2px -2px 4px rgba(255,255,255,.4),2px 2px 2px rgba(255,255,255,.05),2px 2px 4px rgba(0,0,0,.1)"
-              style="
-                width: 10rem;
-                height: 10rem;
-                border-radius: 9999px;
-                background: linear-gradient(135deg, #f12711, #f5af19);
-              "
-            >
-              <div
-                class="relative flex items-center justify-center bg-gray-200 rounded-full border border-white"
-                style="
-                  width: 8rem;
-                  height: 8rem;
-                  box-shadow: inset 5px 5px 10px #a3b1c6,
-                    inset -5px -5px 10px #ffffff;
-                "
-              >
-                <span
-                  class="text-center text-sm sm:text-base font-semibold text-gray-700 drop-shadow"
-                >
-                  SHS
-                </span>
-              </div>
-            </div>
-
-            <div
-              class="flex-grow flex flex-col justify-center text-center space-y-4"
-            >
-              <p class="text-sm font-medium border-y-2 border-gray-600 py-1">
-                2020&nbsp;–&nbsp;2022
-              </p>
-              <ul class="text-sm space-y-1 text-left" role="list">
-                <li>• Grade&nbsp;12 – STEM&nbsp;B</li>
-                <li>• Grade&nbsp;11 – STEM&nbsp;B</li>
-              </ul>
-            </div>
-
-            <p
-              class="mt-4 px-4 py-2 rounded-2xl text-sm font-medium bg-gray-200"
-              style="
-                box-shadow: 2px 2px 2px #cfcfcf inset, -2px -2px 2px #fff inset;
-              "
-            >
-              Muñoz&nbsp;National&nbsp;High&nbsp;School
-            </p>
+          <div class="text-center">
+            <p class="date">2022 - Present</p>
+            <ul class="list-inside text-left text-sm">
+              <li>Junior - BSIT</li>
+              <li>Sophomore - BSIT</li>
+              <li>Freshman - BSIT</li>
+            </ul>
           </div>
-
-          <!-- JHS -->
-          <div
-            class="flex flex-col items-center h-80 sm:h-96"
-            style="
-              animation: fadeUp 0.6s ease forwards;
-              animation-delay: 0.25s;
-              opacity: 0;
-            "
-          >
-            <div
-              tabindex="0"
-              role="img"
-              aria-label="Junior High School icon"
-              class="neumorphic mb-4 relative flex items-center justify-center"
-              data-shadow="9px 9px 16px #a3b1c6,-9px -9px 16px #ffffff"
-              data-shadow-hover="-2px -2px 6px rgba(255,255,255,.6),-2px -2px 4px rgba(255,255,255,.4),2px 2px 2px rgba(255,255,255,.05),2px 2px 4px rgba(0,0,0,.1)"
-              style="
-                width: 10rem;
-                height: 10rem;
-                border-radius: 9999px;
-                background: linear-gradient(135deg, #f4c4f3, #fc67fa);
-              "
-            >
-              <div
-                class="relative flex items-center justify-center bg-gray-200 rounded-full border border-white"
-                style="
-                  width: 8rem;
-                  height: 8rem;
-                  box-shadow: inset 5px 5px 10px #a3b1c6,
-                    inset -5px -5px 10px #ffffff;
-                "
-              >
-                <span
-                  class="text-center text-sm sm:text-base font-semibold text-gray-700 drop-shadow"
-                >
-                  JHS
-                </span>
-              </div>
-            </div>
-
-            <div
-              class="flex-grow flex flex-col justify-center text-center space-y-4"
-            >
-              <p class="text-sm font-medium border-y-2 border-gray-600 py-1">
-                2016&nbsp;–&nbsp;2020
-              </p>
-              <ul class="text-sm space-y-1 text-left" role="list">
-                <li>• Grade&nbsp;10 – Balite</li>
-                <li>• Grade&nbsp;9 – Ruby</li>
-                <li>• Grade&nbsp;8 – Chico</li>
-                <li>• Grade&nbsp;7 – Lavender</li>
-              </ul>
-            </div>
-
-            <p
-              class="mt-4 px-4 py-2 rounded-2xl text-sm font-medium bg-gray-200"
-              style="
-                box-shadow: 2px 2px 2px #cfcfcf inset, -2px -2px 2px #fff inset;
-              "
-            >
-              Muñoz&nbsp;National&nbsp;High&nbsp;School
-            </p>
-          </div>
-
-          <!-- ELEMENTARY -->
-          <div
-            class="flex flex-col items-center h-80 sm:h-96"
-            style="
-              animation: fadeUp 0.6s ease forwards;
-              animation-delay: 0.35s;
-              opacity: 0;
-            "
-          >
-            <div
-              tabindex="0"
-              role="img"
-              aria-label="Elementary icon"
-              class="neumorphic mb-4 relative flex items-center justify-center"
-              data-shadow="9px 9px 16px #a3b1c6,-9px -9px 16px #ffffff"
-              data-shadow-hover="-2px -2px 6px rgba(255,255,255,.6),-2px -2px 4px rgba(255,255,255,.4),2px 2px 2px rgba(255,255,255,.05),2px 2px 4px rgba(0,0,0,.1)"
-              style="
-                width: 10rem;
-                height: 10rem;
-                border-radius: 9999px;
-                background: linear-gradient(135deg, #dce35b, #45b649);
-              "
-            >
-              <div
-                class="relative flex items-center justify-center bg-gray-200 rounded-full border border-white"
-                style="
-                  width: 8rem;
-                  height: 8rem;
-                  box-shadow: inset 5px 5px 10px #a3b1c6,
-                    inset -5px -5px 10px #ffffff;
-                "
-              >
-                <span
-                  class="text-center text-xs sm:text-sm font-semibold text-gray-700 drop-shadow"
-                >
-                  Elementary
-                </span>
-              </div>
-            </div>
-
-            <div
-              class="flex-grow flex flex-col justify-center text-center space-y-4"
-            >
-              <p class="text-sm font-medium border-y-2 border-gray-600 py-1">
-                2010&nbsp;–&nbsp;2016
-              </p>
-              <ul class="text-sm space-y-1 text-left" role="list">
-                <li>• Grade&nbsp;1-6&nbsp;: Section&nbsp;A</li>
-                <li>• Kindergarten</li>
-              </ul>
-            </div>
-
-            <p
-              class="mt-4 px-4 py-2 rounded-2xl text-sm font-medium bg-gray-200"
-              style="
-                box-shadow: 2px 2px 2px #cfcfcf inset, -2px -2px 2px #fff inset;
-              "
-            >
-              Bantug&nbsp;Elementary&nbsp;School
-            </p>
-          </div>
+          <p class="description">Central Luzon State University</p>
         </div>
 
-        <!-- side hero image -->
-        <div class="lg:col-span-1 flex justify-center lg:justify-end">
-          <figure
-            class="w-full max-w-xs h-80 sm:h-96 rounded-t-full rounded-b-lg overflow-hidden bg-gray-200"
-            style="
-              box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
-              animation: fadeUp 0.8s ease forwards;
-              animation-delay: 0.45s;
-              opacity: 0;
-            "
-          >
-            <img
-              src="https://images.unsplash.com/photo-1558024920-b33e3b14b6b7?auto=format&fit=crop&w=800&q=80"
-              alt="Books arranged in a library shelf"
-              class="w-full h-full object-cover rounded-t-full rounded-b-lg transition-transform duration-500 hover:scale-105"
-            />
-            <figcaption class="sr-only">
-              Stacked books representing education
-            </figcaption>
-          </figure>
-        </div>
-      </div>
-
-      <!-- bottom bar -->
-      <div
-        class="flex flex-col lg:flex-row items-center justify-between mt-16 pt-8 border-t-2 border-gray-300 gap-8"
-      >
-        <!-- partner logos -->
-        <div class="flex flex-wrap justify-center lg:justify-start gap-6">
-          <img
-            src="https://images.unsplash.com/photo-1581092333979-1c8e09f32df6?auto=format&fit=crop&w=120&q=80"
-            alt="Partner Logo 1"
-            class="w-16 h-16 lg:w-20 lg:h-20 rounded-full shadow-lg transition-transform duration-300 hover:scale-110"
-          />
-          <img
-            src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=120&q=80"
-            alt="Partner Logo 2"
-            class="w-16 h-16 lg:w-20 lg:h-20 rounded-full shadow-lg transition-transform duration-300 hover:scale-110"
-          />
-          <img
-            src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=120&q=80"
-            alt="Partner Logo 3"
-            class="w-16 h-16 lg:w-20 lg:h-20 rounded-full shadow-lg transition-transform duration-300 hover:scale-110"
-          />
-          <img
-            src="https://images.unsplash.com/photo-1531891437562-9e35577a0e34?auto=format&fit=crop&w=120&q=80"
-            alt="Partner Logo 4"
-            class="w-16 h-16 lg:w-20 lg:h-20 rounded-full shadow-lg transition-transform duration-300 hover:scale-110"
-          />
+        <!-- TWO: SHS -->
+        <div class="timeline-item flex flex-col justify-between text-center h-[380px]">
+          <div class="circle-div flex justify-center items-center">
+            <div class="circle c2">
+              <div class="inner-circle">
+                <span>SHS</span>
+              </div>
+            </div>
+          </div>
+          <div class="text-center">
+            <p class="date">2020 - 2022</p>
+            <ul class="list-inside text-left text-sm">
+              <li>Grade 12 - STEM B</li>
+              <li>Grade 11 - STEM B</li>
+            </ul>
+          </div>
+          <p class="description">Munoz National High School</p>
         </div>
 
-        <!-- big label -->
-        <h2
-          class="text-3xl sm:text-4xl lg:text-6xl font-semibold tracking-[.15em] text-gray-600 drop-shadow-md text-center lg:text-right"
-        >
-          EDUCATION
-        </h2>
+        <!-- THREE: JHS -->
+        <div class="timeline-item flex flex-col justify-between text-center h-[380px]">
+          <div class="circle-div flex justify-center items-center">
+            <div class="circle c3">
+              <div class="inner-circle">
+                <span>JHS</span>
+              </div>
+            </div>
+          </div>
+          <div class="text-center">
+            <p class="date">2016 - 2020</p>
+            <ul class="list-inside text-left text-sm">
+              <li>Grade 10 - Balite</li>
+              <li>Grade 9 - Ruby</li>
+              <li>Grade 8 - Chico</li>
+              <li>Grade 7 - Lavender</li>
+            </ul>
+          </div>
+          <p class="description">Munoz National High School</p>
+        </div>
+
+        <!-- FOUR: Elementary -->
+        <div class="timeline-item flex flex-col justify-between text-center h-[380px]">
+          <div class="circle-div flex justify-center items-center">
+            <div class="circle c4">
+              <div class="inner-circle">
+                <span>Elementary</span>
+              </div>
+            </div>
+          </div>
+          <div class="text-center">
+            <p class="date">2010 - 2016</p>
+            <ul class="list-inside text-left text-sm">
+              <li>Grade 1-6 : Section A</li>
+              <li>Kindergarten</li>
+            </ul>
+          </div>
+          <p class="description">Bantug Elementary School</p>
+        </div>
+
       </div>
     </div>
 
-    <!-- simple keyframes + JS hover handling -->
-    <style>
-      @keyframes fadeUp {
-        0% {
-          transform: translateY(30px);
-          opacity: 0;
-        }
-        100% {
-          transform: translateY(0);
-          opacity: 1;
-        }
-      }
-    </style>
-    <script>
-      document.querySelectorAll(".neumorphic").forEach((el) => {
-        const base = el.dataset.shadow;
-        const hover = el.dataset.shadowHover;
-        el.style.boxShadow = base;
-        el.addEventListener("mouseenter", () => (el.style.boxShadow = hover));
-        el.addEventListener("mouseleave", () => (el.style.boxShadow = base));
-        el.addEventListener("focus", () => (el.style.boxShadow = hover));
-        el.addEventListener("blur", () => (el.style.boxShadow = base));
-      });
-    </script>
+    <!-- RIGHT IMAGE -->
+    <div class="timeline-right flex justify-center items-center">
+      <div class="image-container w-full h-[380px] overflow-hidden rounded-[200px_200px_10px_10px] p-4">
+        <img src="images/education/Siever.jpg" alt="Education" class="w-full h-full object-cover rounded-[200px_200px_10px_10px]">
+      </div>
+    </div>
+  </div>
+
+  <!-- BOTTOM TIMELINE -->
+  <div class="timeline-bottom flex flex-col lg:flex-row justify-between mt-12 gap-6 lg:gap-0">
+    <div class="timeline-img flex justify-center items-center gap-5">
+      <img src="images/education/CLSU.png" alt="" class="w-20 h-20 rounded-full shadow-lg transition-transform duration-300 hover:scale-110 hover:shadow-xl">
+      <img src="images/education/SHS.png" alt="" class="w-20 h-20 rounded-full shadow-lg transition-transform duration-300 hover:scale-110 hover:shadow-xl">
+      <img src="images/education/JHS.png" alt="" class="w-20 h-20 rounded-full shadow-lg transition-transform duration-300 hover:scale-110 hover:shadow-xl">
+      <img src="images/education/Bantug.jpg" alt="" class="w-20 h-20 rounded-full shadow-lg transition-transform duration-300 hover:scale-110 hover:shadow-xl">
+    </div>
+    <h1 class="timeline-title text-[3rem] sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-center uppercase text-gray-200 tracking-widest mt-4 lg:mt-0">EDUCATION</h1>
+  </div>
+</div>
+
   </body>
 </html>
