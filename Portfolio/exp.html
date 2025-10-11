@@ -1,289 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experience Section</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/experience.css">
-</head>
-<body class="min-h-screen bg-gray-200 font-[Oswald] text-gray-800 selection:bg-gray-700 selection:text-white">
-    <div class="experience-container border-l border-gray-300 min-h-[200px] mx-4 md:mx-8 lg:mx-16 my-8" id="experience-container">
-        
-        <!-- Top Section -->
-        <div class="exp-top">
-         <h1 class="exp-title text-5xl md:text-6xl font-bold lg:text-8xl tracking-widest pl-4 lg:pl-5 text-gray-800 mb-6 lg:mb-8">
-  EXPERIENCE <span class="exp-title-span text-gray-200">OVERVIEW</span>
-</h1>
-
-
-         <div class="experience-note text-base text-gray-800 text-justify p-5 lg:p-5 border-t-2 border-b-2 border-gray-300 mb-6 lg:mb-8">
-  The languages and experience listed below represent an estimate of my usage with each language and tool. 
-  It does not reflect my level of expertise, but rather the time I have spent working with each language. 
-  The timeframes exclude vacation days, holidays, and other breaks.
-</div>
-
-            <div class="exp-head1 flex flex-col lg:flex-row items-center justify-between mb-6 lg:mb-8">
-              <h1 class="skill-title text-5xl font-bold md:text-6xl lg:text-7xl text-left tracking-widest text-gray-200 pl-5 lg:pl-5 mb-4 lg:mb-0">
-  SKILLS
-</h1>
-
-            
-           <div class="filter-buttons flex flex-wrap gap-2 lg:gap-2 justify-start items-center mx-5 lg:mx-5 my-5">
-  <button class="filter-btn active transition-all duration-300 cursor-pointer rounded-lg px-3 py-3 lg:px-5 lg:py-3 text-sm lg:text-base text-white" onclick="filterSkills('')">
-    <span class="block text-xs lg:text-sm capitalize">All</span>
-  </button>
-  <button class="filter-btn transition-all duration-300 cursor-pointer rounded-lg px-3 py-3 lg:px-5 lg:py-3 text-sm lg:text-base text-white" onclick="filterSkills('frontend')">
-    <span class="block text-xs lg:text-sm capitalize">Frontend</span>
-  </button>
-  <button class="filter-btn transition-all duration-300 cursor-pointer rounded-lg px-3 py-3 lg:px-5 lg:py-3 text-sm lg:text-base text-white" onclick="filterSkills('backend')">
-    <span class="block text-xs lg:text-sm capitalize">Backend</span>
-  </button>
-  <button class="filter-btn transition-all duration-300 cursor-pointer rounded-lg px-3 py-3 lg:px-5 lg:py-3 text-sm lg:text-base text-white" onclick="filterSkills('sp')">
-    <span class="block text-xs lg:text-sm capitalize">System Programming</span>
-  </button>
-  <button class="filter-btn transition-all duration-300 cursor-pointer rounded-lg px-3 py-3 lg:px-5 lg:py-3 text-sm lg:text-base text-white" onclick="filterSkills('framework')">
-    <span class="block text-xs lg:text-sm capitalize">Framework</span>
-  </button>
-</div>
-
-
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Experience Section</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/experience.css">
+    </head>
+    <body class="min-h-screen bg-gray-200 font-[Oswald] text-gray-800 selection:bg-gray-700 selection:text-white">
+        <div class="experience-container border-l border-gray-300 min-h-[200px] mx-4 md:mx-8 lg:mx-16 my-8" id="experience-container">
+            <!-- Top Section -->
+            <div class="exp-top">
+                <h1 class="exp-title text-5xl md:text-6xl font-bold lg:text-8xl tracking-widest pl-4 lg:pl-5 text-gray-800 mb-6 lg:mb-8"> EXPERIENCE <span class="exp-title-span text-gray-200">OVERVIEW</span>
+                </h1>
+                <div class="experience-note text-base text-gray-800 text-justify p-5 lg:p-5 border-t-2 border-b-2 border-gray-300 mb-6 lg:mb-8"> The languages and experience listed below represent an estimate of my usage with each language and tool. It does not reflect my level of expertise, but rather the time I have spent working with each language. The timeframes exclude vacation days, holidays, and other breaks. </div>
+                <div class="exp-head1 flex flex-col lg:flex-row items-center justify-between mb-6 lg:mb-8">
+                    <h1 class="skill-title text-5xl font-bold md:text-6xl lg:text-7xl text-left tracking-widest text-gray-200 pl-5 lg:pl-5 mb-4 lg:mb-0"> SKILLS </h1>
+                    <div class="filter-buttons flex flex-wrap gap-2 lg:gap-2 justify-start items-center mx-5 lg:mx-5 my-5">
+                        <button class="filter-btn active transition-all duration-300 cursor-pointer rounded-lg px-3 py-3 lg:px-5 lg:py-3 text-sm lg:text-base text-white" onclick="filterSkills('')">
+                            <span class="block text-xs lg:text-sm capitalize">All</span>
+                        </button>
+                        <button class="filter-btn transition-all duration-300 cursor-pointer rounded-lg px-3 py-3 lg:px-5 lg:py-3 text-sm lg:text-base text-white" onclick="filterSkills('frontend')">
+                            <span class="block text-xs lg:text-sm capitalize">Frontend</span>
+                        </button>
+                        <button class="filter-btn transition-all duration-300 cursor-pointer rounded-lg px-3 py-3 lg:px-5 lg:py-3 text-sm lg:text-base text-white" onclick="filterSkills('backend')">
+                            <span class="block text-xs lg:text-sm capitalize">Backend</span>
+                        </button>
+                        <button class="filter-btn transition-all duration-300 cursor-pointer rounded-lg px-3 py-3 lg:px-5 lg:py-3 text-sm lg:text-base text-white" onclick="filterSkills('sp')">
+                            <span class="block text-xs lg:text-sm capitalize">System Programming</span>
+                        </button>
+                        <button class="filter-btn transition-all duration-300 cursor-pointer rounded-lg px-3 py-3 lg:px-5 lg:py-3 text-sm lg:text-base text-white" onclick="filterSkills('framework')">
+                            <span class="block text-xs lg:text-sm capitalize">Framework</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Experience Grid -->
+            <div id="experience" class="w-full max-w-full mx-0 p-5 lg:p-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-5 border-b-2 border-gray-300">
+                <div class="language mb-5 lg:mb-5 flex items-start gap-5 lg:gap-5 w-full" data-category="sp">
+                    <div class="content-wrapper flex gap-5 lg:gap-5 w-full">
+                        <div class="neumorphism-3 flex justify-center items-center h-20 w-20 lg:h-24 lg:w-24 rounded-full relative transition-all duration-200 flex-shrink-0">
+                            <img src="images/languages/c-original.svg" alt="C Language Icon" class="w-1/2 h-1/2 object-contain">
+                        </div>
+                        <div class="text-content flex flex-col justify-center flex-grow">
+                            <h3 class="text-base lg:text-lg m-0 text-gray-800">C Language</h3>
+                            <p class="mt-1 mb-0 text-xs lg:text-sm text-gray-600">Experience: Sep. 2022 - April 2023</p>
+                            <div class="progress-bar mt-5 lg:mt-5 bg-gray-100 rounded-lg overflow-hidden h-4 lg:h-4 w-full relative">
+                                <div class="neumorphism-layer rounded-lg">
+                                    <div class="progress h-full absolute left-0 top-0 rounded-lg" style="--final-width: 80%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="language mb-5 lg:mb-5 flex items-start gap-5 lg:gap-5 w-full" data-category="backend,sp">
+                    <div class="content-wrapper flex gap-5 lg:gap-5 w-full">
+                        <div class="neumorphism-3 flex justify-center items-center h-20 w-20 lg:h-24 lg:w-24 rounded-full relative transition-all duration-200 flex-shrink-0">
+                            <img src="images/languages/java-original.svg" alt="Java" class="w-1/2 h-1/2 object-contain">
+                        </div>
+                        <div class="text-content flex flex-col justify-center flex-grow">
+                            <h3 class="text-base lg:text-lg m-0 text-gray-800">Java</h3>
+                            <p class="mt-1 mb-0 text-xs lg:text-sm text-gray-600">Experience: Sep - Dec 2023</p>
+                            <div class="progress-bar mt-5 lg:mt-5 bg-gray-100 rounded-lg overflow-hidden h-4 lg:h-4 w-full relative">
+                                <div class="neumorphism-layer rounded-lg">
+                                    <div class="progress h-full absolute left-0 top-0 rounded-lg" style="--final-width: 30%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="language mb-5 lg:mb-5 flex items-start gap-5 lg:gap-5 w-full" data-category="frontend">
+                    <div class="content-wrapper flex gap-5 lg:gap-5 w-full">
+                        <div class="neumorphism-3 flex justify-center items-center h-20 w-20 lg:h-24 lg:w-24 rounded-full relative transition-all duration-200 flex-shrink-0">
+                            <img src="images/languages/html5-plain.svg" alt="HTML" class="w-1/2 h-1/2 object-contain">
+                        </div>
+                        <div class="text-content flex flex-col justify-center flex-grow">
+                            <h3 class="text-base lg:text-lg m-0 text-gray-800">HTML</h3>
+                            <p class="mt-1 mb-0 text-xs lg:text-sm text-gray-600">Experience: Oct. 2023 - Present</p>
+                            <div class="progress-bar mt-5 lg:mt-5 bg-gray-100 rounded-lg overflow-hidden h-4 lg:h-4 w-full relative">
+                                <div class="neumorphism-layer rounded-lg">
+                                    <div class="progress h-full absolute left-0 top-0 rounded-lg" style="--final-width: 60%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="language mb-5 lg:mb-5 flex items-start gap-5 lg:gap-5 w-full" data-category="frontend">
+                    <div class="content-wrapper flex gap-5 lg:gap-5 w-full">
+                        <div class="neumorphism-3 flex justify-center items-center h-20 w-20 lg:h-24 lg:w-24 rounded-full relative transition-all duration-200 flex-shrink-0">
+                            <img src="images/languages/css3-plain.svg" alt="CSS" class="w-1/2 h-1/2 object-contain">
+                        </div>
+                        <div class="text-content flex flex-col justify-center flex-grow">
+                            <h3 class="text-base lg:text-lg m-0 text-gray-800">CSS</h3>
+                            <p class="mt-1 mb-0 text-xs lg:text-sm text-gray-600">Experience: Oct. 2023 - Present</p>
+                            <div class="progress-bar mt-5 lg:mt-5 bg-gray-100 rounded-lg overflow-hidden h-4 lg:h-4 w-full relative">
+                                <div class="neumorphism-layer rounded-lg">
+                                    <div class="progress h-full absolute left-0 top-0 rounded-lg" style="--final-width: 60%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="language mb-5 lg:mb-5 flex items-start gap-5 lg:gap-5 w-full" data-category="frontend">
+                    <div class="content-wrapper flex gap-5 lg:gap-5 w-full">
+                        <div class="neumorphism-3 flex justify-center items-center h-20 w-20 lg:h-24 lg:w-24 rounded-full relative transition-all duration-200 flex-shrink-0">
+                            <img src="images/languages/javascript-original.svg" alt="JavaScript" class="w-1/2 h-1/2 object-contain">
+                        </div>
+                        <div class="text-content flex flex-col justify-center flex-grow">
+                            <h3 class="text-base lg:text-lg m-0 text-gray-800">JavaScript</h3>
+                            <p class="mt-1 mb-0 text-xs lg:text-sm text-gray-600">Experience: Nov. 2023</p>
+                            <div class="progress-bar mt-5 lg:mt-5 bg-gray-100 rounded-lg overflow-hidden h-4 lg:h-4 w-full relative">
+                                <div class="neumorphism-layer rounded-lg">
+                                    <div class="progress h-full absolute left-0 top-0 rounded-lg" style="--final-width: 25%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="language mb-5 lg:mb-5 flex items-start gap-5 lg:gap-5 w-full" data-category="backend">
+                    <div class="content-wrapper flex gap-5 lg:gap-5 w-full">
+                        <div class="neumorphism-3 flex justify-center items-center h-20 w-20 lg:h-24 lg:w-24 rounded-full relative transition-all duration-200 flex-shrink-0">
+                            <img src="images/languages/mysql-original-wordmark.svg" alt="MySQL" class="w-1/2 h-1/2 object-contain">
+                        </div>
+                        <div class="text-content flex flex-col justify-center flex-grow">
+                            <h3 class="text-base lg:text-lg m-0 text-gray-800">MySQL</h3>
+                            <p class="mt-1 mb-0 text-xs lg:text-sm text-gray-600">Experience: July 2023 - Dec 2024</p>
+                            <div class="progress-bar mt-5 lg:mt-5 bg-gray-100 rounded-lg overflow-hidden h-4 lg:h-4 w-full relative">
+                                <div class="neumorphism-layer rounded-lg">
+                                    <div class="progress h-full absolute left-0 top-0 rounded-lg" style="--final-width: 50%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="language mb-5 lg:mb-5 flex items-start gap-5 lg:gap-5 w-full" data-category="backend">
+                    <div class="content-wrapper flex gap-5 lg:gap-5 w-full">
+                        <div class="neumorphism-3 flex justify-center items-center h-20 w-20 lg:h-24 lg:w-24 rounded-full relative transition-all duration-200 flex-shrink-0">
+                            <img src="images/languages/php-original.svg" alt="PHP" class="w-1/2 h-1/2 object-contain">
+                        </div>
+                        <div class="text-content flex flex-col justify-center flex-grow">
+                            <h3 class="text-base lg:text-lg m-0 text-gray-800">PHP</h3>
+                            <p class="mt-1 mb-0 text-xs lg:text-sm text-gray-600">Experience: Jan. - Dec. 2024</p>
+                            <div class="progress-bar mt-5 lg:mt-5 bg-gray-100 rounded-lg overflow-hidden h-4 lg:h-4 w-full relative">
+                                <div class="neumorphism-layer rounded-lg">
+                                    <div class="progress h-full absolute left-0 top-0 rounded-lg" style="--final-width: 50%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="language mb-5 lg:mb-5 flex items-start gap-5 lg:gap-5 w-full" data-category="backend,sp">
+                    <div class="content-wrapper flex gap-5 lg:gap-5 w-full">
+                        <div class="neumorphism-3 flex justify-center items-center h-20 w-20 lg:h-24 lg:w-24 rounded-full relative transition-all duration-200 flex-shrink-0">
+                            <img src="images/languages/python-original.svg" alt="Python" class="w-1/2 h-1/2 object-contain">
+                        </div>
+                        <div class="text-content flex flex-col justify-center flex-grow">
+                            <h3 class="text-base lg:text-lg m-0 text-gray-800">Python</h3>
+                            <p class="mt-1 mb-0 text-xs lg:text-sm text-gray-600">Experience: Aug. - Dec. 2024</p>
+                            <div class="progress-bar mt-5 lg:mt-5 bg-gray-100 rounded-lg overflow-hidden h-4 lg:h-4 w-full relative">
+                                <div class="neumorphism-layer rounded-lg">
+                                    <div class="progress h-full absolute left-0 top-0 rounded-lg" style="--final-width: 30%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="language mb-5 lg:mb-5 flex items-start gap-5 lg:gap-5 w-full" data-category="framework, backend">
+                    <div class="content-wrapper flex gap-5 lg:gap-5 w-full">
+                        <div class="neumorphism-3 flex justify-center items-center h-20 w-20 lg:h-24 lg:w-24 rounded-full relative transition-all duration-200 flex-shrink-0">
+                            <img src="images/languages/django-plain-wordmark.svg" alt="Django" class="w-1/2 h-1/2 object-contain">
+                        </div>
+                        <div class="text-content flex flex-col justify-center flex-grow">
+                            <h3 class="text-base lg:text-lg m-0 text-gray-800">Django</h3>
+                            <p class="mt-1 mb-0 text-xs lg:text-sm text-gray-600">Experience: Nov. - Dec. 2024</p>
+                            <div class="progress-bar mt-5 lg:mt-5 bg-gray-100 rounded-lg overflow-hidden h-4 lg:h-4 w-full relative">
+                                <div class="neumorphism-layer rounded-lg">
+                                    <div class="progress h-full absolute left-0 top-0 rounded-lg" style="--final-width: 10%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="language mb-5 lg:mb-5 flex items-start gap-5 lg:gap-5 w-full" data-category="framework, frontend">
+                    <div class="content-wrapper flex gap-5 lg:gap-5 w-full">
+                        <div class="neumorphism-3 flex justify-center items-center h-20 w-20 lg:h-24 lg:w-24 rounded-full relative transition-all duration-200 flex-shrink-0">
+                            <img src="images/languages/react-original.svg" alt="React JS" class="w-1/2 h-1/2 object-contain">
+                        </div>
+                        <div class="text-content flex flex-col justify-center flex-grow">
+                            <h3 class="text-base lg:text-lg m-0 text-gray-800">React</h3>
+                            <p class="mt-1 mb-0 text-xs lg:text-sm text-gray-600">Experience: ---- </p>
+                            <div class="progress-bar mt-5 lg:mt-5 bg-gray-100 rounded-lg overflow-hidden h-4 lg:h-4 w-full relative">
+                                <div class="neumorphism-layer rounded-lg">
+                                    <div class="progress h-full absolute left-0 top-0 rounded-lg" style="--final-width: 10%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="language mb-5 lg:mb-5 flex items-start gap-5 lg:gap-5 w-full" data-category="framework, backend">
+                    <div class="content-wrapper flex gap-5 lg:gap-5 w-full">
+                        <div class="neumorphism-3 flex justify-center items-center h-20 w-20 lg:h-24 lg:w-24 rounded-full relative transition-all duration-200 flex-shrink-0">
+                            <img src="images/languages/laravel-original.svg" alt="Laravel" class="w-1/2 h-1/2 object-contain">
+                        </div>
+                        <div class="text-content flex flex-col justify-center flex-grow">
+                            <h3 class="text-base lg:text-lg m-0 text-gray-800">Laravel</h3>
+                            <p class="mt-1 mb-0 text-xs lg:text-sm text-gray-600">Experience: ---- </p>
+                            <div class="progress-bar mt-5 lg:mt-5 bg-gray-100 rounded-lg overflow-hidden h-4 lg:h-4 w-full relative">
+                                <div class="neumorphism-layer rounded-lg">
+                                    <div class="progress h-full absolute left-0 top-0 rounded-lg" style="--final-width: 10%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="language mb-5 lg:mb-5 flex items-start gap-5 lg:gap-5 w-full" data-category="framework, frontend">
+                    <div class="content-wrapper flex gap-5 lg:gap-5 w-full">
+                        <div class="neumorphism-3 flex justify-center items-center h-20 w-20 lg:h-24 lg:w-24 rounded-full relative transition-all duration-200 flex-shrink-0">
+                            <img src="images/languages/tailwindcss-original.svg" alt="Tailwind" class="w-1/2 h-1/2 object-contain">
+                        </div>
+                        <div class="text-content flex flex-col justify-center flex-grow">
+                            <h3 class="text-base lg:text-lg m-0 text-gray-800">Tailwind CSS</h3>
+                            <p class="mt-1 mb-0 text-xs lg:text-sm text-gray-600">Experience: ----</p>
+                            <div class="progress-bar mt-5 lg:mt-5 bg-gray-100 rounded-lg overflow-hidden h-4 lg:h-4 w-full relative">
+                                <div class="neumorphism-layer rounded-lg">
+                                    <div class="progress h-full absolute left-0 top-0 rounded-lg" style="--final-width: 10%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <!-- Experience Grid -->
-        <div id="experience" class="w-full max-w-full mx-0 p-5 lg:p-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-5 border-b-2 border-gray-300">
-            
-            <div class="language mb-5 lg:mb-5 flex items-start gap-5 lg:gap-5 w-full" data-category="sp">
-                <div class="content-wrapper flex gap-5 lg:gap-5 w-full">
-                    <div class="neumorphism-3 flex justify-center items-center h-20 w-20 lg:h-24 lg:w-24 rounded-full relative transition-all duration-200 flex-shrink-0">
-                        <img src="images/languages/c-original.svg" alt="C Language Icon" class="w-1/2 h-1/2 object-contain">
-                    </div>
-                    <div class="text-content flex flex-col justify-center flex-grow">
-                        <h3 class="text-base lg:text-lg m-0 text-gray-800">C Language</h3>
-                        <p class="mt-1 mb-0 text-xs lg:text-sm text-gray-600">Experience: Sep. 2022 - April 2023</p>
-                    <div class="progress-bar mt-5 lg:mt-5 bg-gray-100 rounded-lg overflow-hidden h-4 lg:h-4 w-full relative">
-  <div class="neumorphism-layer rounded-lg">
-    <div class="progress h-full absolute left-0 top-0 rounded-lg" style="--final-width: 80%;"></div>
-  </div>
-</div>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="language mb-5 lg:mb-5 flex items-start gap-5 lg:gap-5 w-full" data-category="backend,sp">
-                <div class="content-wrapper flex gap-5 lg:gap-5 w-full">
-                    <div class="neumorphism-3 flex justify-center items-center h-20 w-20 lg:h-24 lg:w-24 rounded-full relative transition-all duration-200 flex-shrink-0">
-                        <img src="images/languages/java-original.svg" alt="Java" class="w-1/2 h-1/2 object-contain">
-                    </div>
-                    <div class="text-content flex flex-col justify-center flex-grow">
-                        <h3 class="text-base lg:text-lg m-0 text-gray-800">Java</h3>
-                        <p class="mt-1 mb-0 text-xs lg:text-sm text-gray-600">Experience: Sep - Dec 2023</p>
-                        <div class="progress-bar mt-5 lg:mt-5 bg-gray-100 rounded-lg overflow-hidden h-4 lg:h-4 w-full relative">
-                            <div class="neumorphism-layer rounded-lg">
-                                <div class="progress h-full absolute left-0 top-0 rounded-lg" style="--final-width: 30%;"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="language mb-5 lg:mb-5 flex items-start gap-5 lg:gap-5 w-full" data-category="frontend">
-                <div class="content-wrapper flex gap-5 lg:gap-5 w-full">
-                    <div class="neumorphism-3 flex justify-center items-center h-20 w-20 lg:h-24 lg:w-24 rounded-full relative transition-all duration-200 flex-shrink-0">
-                        <img src="images/languages/html5-plain.svg" alt="HTML" class="w-1/2 h-1/2 object-contain">
-                    </div>
-                    <div class="text-content flex flex-col justify-center flex-grow">
-                        <h3 class="text-base lg:text-lg m-0 text-gray-800">HTML</h3>
-                        <p class="mt-1 mb-0 text-xs lg:text-sm text-gray-600">Experience: Oct. 2023 - Present</p>
-                        <div class="progress-bar mt-5 lg:mt-5 bg-gray-100 rounded-lg overflow-hidden h-4 lg:h-4 w-full relative">
-                            <div class="neumorphism-layer rounded-lg">
-                                <div class="progress h-full absolute left-0 top-0 rounded-lg" style="--final-width: 60%;"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="language mb-5 lg:mb-5 flex items-start gap-5 lg:gap-5 w-full" data-category="frontend">
-                <div class="content-wrapper flex gap-5 lg:gap-5 w-full">
-                    <div class="neumorphism-3 flex justify-center items-center h-20 w-20 lg:h-24 lg:w-24 rounded-full relative transition-all duration-200 flex-shrink-0">
-                        <img src="images/languages/css3-plain.svg" alt="CSS" class="w-1/2 h-1/2 object-contain">
-                    </div>
-                    <div class="text-content flex flex-col justify-center flex-grow">
-                        <h3 class="text-base lg:text-lg m-0 text-gray-800">CSS</h3>
-                        <p class="mt-1 mb-0 text-xs lg:text-sm text-gray-600">Experience: Oct. 2023 - Present</p>
-                        <div class="progress-bar mt-5 lg:mt-5 bg-gray-100 rounded-lg overflow-hidden h-4 lg:h-4 w-full relative">
-                            <div class="neumorphism-layer rounded-lg">
-                                <div class="progress h-full absolute left-0 top-0 rounded-lg" style="--final-width: 60%;"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="language mb-5 lg:mb-5 flex items-start gap-5 lg:gap-5 w-full" data-category="frontend">
-                <div class="content-wrapper flex gap-5 lg:gap-5 w-full">
-                    <div class="neumorphism-3 flex justify-center items-center h-20 w-20 lg:h-24 lg:w-24 rounded-full relative transition-all duration-200 flex-shrink-0">
-                        <img src="images/languages/javascript-original.svg" alt="JavaScript" class="w-1/2 h-1/2 object-contain">
-                    </div>
-                    <div class="text-content flex flex-col justify-center flex-grow">
-                        <h3 class="text-base lg:text-lg m-0 text-gray-800">JavaScript</h3>
-                        <p class="mt-1 mb-0 text-xs lg:text-sm text-gray-600">Experience: Nov. 2023</p>
-                        <div class="progress-bar mt-5 lg:mt-5 bg-gray-100 rounded-lg overflow-hidden h-4 lg:h-4 w-full relative">
-                            <div class="neumorphism-layer rounded-lg">
-                                <div class="progress h-full absolute left-0 top-0 rounded-lg" style="--final-width: 25%;"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="language mb-5 lg:mb-5 flex items-start gap-5 lg:gap-5 w-full" data-category="backend">
-                <div class="content-wrapper flex gap-5 lg:gap-5 w-full">
-                    <div class="neumorphism-3 flex justify-center items-center h-20 w-20 lg:h-24 lg:w-24 rounded-full relative transition-all duration-200 flex-shrink-0">
-                        <img src="images/languages/mysql-original-wordmark.svg" alt="MySQL" class="w-1/2 h-1/2 object-contain">
-                    </div>
-                    <div class="text-content flex flex-col justify-center flex-grow">
-                        <h3 class="text-base lg:text-lg m-0 text-gray-800">MySQL</h3>
-                        <p class="mt-1 mb-0 text-xs lg:text-sm text-gray-600">Experience: July 2023 - Dec 2024</p>
-                        <div class="progress-bar mt-5 lg:mt-5 bg-gray-100 rounded-lg overflow-hidden h-4 lg:h-4 w-full relative">
-                            <div class="neumorphism-layer rounded-lg">
-                                <div class="progress h-full absolute left-0 top-0 rounded-lg" style="--final-width: 50%;"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="language mb-5 lg:mb-5 flex items-start gap-5 lg:gap-5 w-full" data-category="backend">
-                <div class="content-wrapper flex gap-5 lg:gap-5 w-full">
-                    <div class="neumorphism-3 flex justify-center items-center h-20 w-20 lg:h-24 lg:w-24 rounded-full relative transition-all duration-200 flex-shrink-0">
-                        <img src="images/languages/php-original.svg" alt="PHP" class="w-1/2 h-1/2 object-contain">
-                    </div>
-                    <div class="text-content flex flex-col justify-center flex-grow">
-                        <h3 class="text-base lg:text-lg m-0 text-gray-800">PHP</h3>
-                        <p class="mt-1 mb-0 text-xs lg:text-sm text-gray-600">Experience: Jan. - Dec. 2024</p>
-                        <div class="progress-bar mt-5 lg:mt-5 bg-gray-100 rounded-lg overflow-hidden h-4 lg:h-4 w-full relative">
-                            <div class="neumorphism-layer rounded-lg">
-                                <div class="progress h-full absolute left-0 top-0 rounded-lg" style="--final-width: 50%;"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="language mb-5 lg:mb-5 flex items-start gap-5 lg:gap-5 w-full" data-category="backend,sp">
-                <div class="content-wrapper flex gap-5 lg:gap-5 w-full">
-                    <div class="neumorphism-3 flex justify-center items-center h-20 w-20 lg:h-24 lg:w-24 rounded-full relative transition-all duration-200 flex-shrink-0">
-                        <img src="images/languages/python-original.svg" alt="Python" class="w-1/2 h-1/2 object-contain">
-                    </div>
-                    <div class="text-content flex flex-col justify-center flex-grow">
-                        <h3 class="text-base lg:text-lg m-0 text-gray-800">Python</h3>
-                        <p class="mt-1 mb-0 text-xs lg:text-sm text-gray-600">Experience: Aug. - Dec. 2024</p>
-                        <div class="progress-bar mt-5 lg:mt-5 bg-gray-100 rounded-lg overflow-hidden h-4 lg:h-4 w-full relative">
-                            <div class="neumorphism-layer rounded-lg">
-                                <div class="progress h-full absolute left-0 top-0 rounded-lg" style="--final-width: 30%;"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="language mb-5 lg:mb-5 flex items-start gap-5 lg:gap-5 w-full" data-category="framework, backend">
-                <div class="content-wrapper flex gap-5 lg:gap-5 w-full">
-                    <div class="neumorphism-3 flex justify-center items-center h-20 w-20 lg:h-24 lg:w-24 rounded-full relative transition-all duration-200 flex-shrink-0">
-                        <img src="images/languages/django-plain-wordmark.svg" alt="Django" class="w-1/2 h-1/2 object-contain">
-                    </div>
-                    <div class="text-content flex flex-col justify-center flex-grow">
-                        <h3 class="text-base lg:text-lg m-0 text-gray-800">Django</h3>
-                        <p class="mt-1 mb-0 text-xs lg:text-sm text-gray-600">Experience: Nov. - Dec. 2024</p>
-                        <div class="progress-bar mt-5 lg:mt-5 bg-gray-100 rounded-lg overflow-hidden h-4 lg:h-4 w-full relative">
-                            <div class="neumorphism-layer rounded-lg">
-                                <div class="progress h-full absolute left-0 top-0 rounded-lg" style="--final-width: 10%;"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-              <div class="language mb-5 lg:mb-5 flex items-start gap-5 lg:gap-5 w-full" data-category="framework, frontend">
-                <div class="content-wrapper flex gap-5 lg:gap-5 w-full">
-                    <div class="neumorphism-3 flex justify-center items-center h-20 w-20 lg:h-24 lg:w-24 rounded-full relative transition-all duration-200 flex-shrink-0">
-                        <img src="images/languages/react-original.svg" alt="React JS" class="w-1/2 h-1/2 object-contain">
-                    </div>
-                    <div class="text-content flex flex-col justify-center flex-grow">
-                        <h3 class="text-base lg:text-lg m-0 text-gray-800">React</h3>
-                        <p class="mt-1 mb-0 text-xs lg:text-sm text-gray-600">Experience: ---- </p>
-                        <div class="progress-bar mt-5 lg:mt-5 bg-gray-100 rounded-lg overflow-hidden h-4 lg:h-4 w-full relative">
-                            <div class="neumorphism-layer rounded-lg">
-                                <div class="progress h-full absolute left-0 top-0 rounded-lg" style="--final-width: 10%;"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-              <div class="language mb-5 lg:mb-5 flex items-start gap-5 lg:gap-5 w-full" data-category="framework, backend">
-                <div class="content-wrapper flex gap-5 lg:gap-5 w-full">
-                    <div class="neumorphism-3 flex justify-center items-center h-20 w-20 lg:h-24 lg:w-24 rounded-full relative transition-all duration-200 flex-shrink-0">
-                        <img src="images/languages/laravel-original.svg" alt="Laravel" class="w-1/2 h-1/2 object-contain">
-                    </div>
-                    <div class="text-content flex flex-col justify-center flex-grow">
-                        <h3 class="text-base lg:text-lg m-0 text-gray-800">Laravel</h3>
-                        <p class="mt-1 mb-0 text-xs lg:text-sm text-gray-600">Experience: ---- </p>
-                        <div class="progress-bar mt-5 lg:mt-5 bg-gray-100 rounded-lg overflow-hidden h-4 lg:h-4 w-full relative">
-                            <div class="neumorphism-layer rounded-lg">
-                                <div class="progress h-full absolute left-0 top-0 rounded-lg" style="--final-width: 10%;"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-              <div class="language mb-5 lg:mb-5 flex items-start gap-5 lg:gap-5 w-full" data-category="framework, frontend">
-                <div class="content-wrapper flex gap-5 lg:gap-5 w-full">
-                    <div class="neumorphism-3 flex justify-center items-center h-20 w-20 lg:h-24 lg:w-24 rounded-full relative transition-all duration-200 flex-shrink-0">
-                        <img src="images/languages/tailwindcss-original.svg" alt="Tailwind" class="w-1/2 h-1/2 object-contain">
-                    </div>
-                    <div class="text-content flex flex-col justify-center flex-grow">
-                        <h3 class="text-base lg:text-lg m-0 text-gray-800">Tailwind CSS</h3>
-                        <p class="mt-1 mb-0 text-xs lg:text-sm text-gray-600">Experience: ----</p>
-                        <div class="progress-bar mt-5 lg:mt-5 bg-gray-100 rounded-lg overflow-hidden h-4 lg:h-4 w-full relative">
-                            <div class="neumorphism-layer rounded-lg">
-                                <div class="progress h-full absolute left-0 top-0 rounded-lg" style="--final-width: 10%;"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            
-        </div>
-    </div>
-
-    <script>
-        function filterSkills(category) {
-            const languages = document.querySelectorAll('.language');
-            const buttons = document.querySelectorAll('.filter-btn');
-            
-            // Remove active class from all buttons
-            buttons.forEach(btn => btn.classList.remove('active'));
-            
-            // Add active class to clicked button
-            event.target.closest('.filter-btn').classList.add('active');
-            
-            languages.forEach(lang => {
-                if (category === '' || lang.dataset.category.includes(category)) {
-                    lang.style.display = 'flex';
-                } else {
-                    lang.style.display = 'none';
-                }
-            });
-        }
-    </script>
-</body>
+        <script>
+            function filterSkills(category) {
+                const languages = document.querySelectorAll('.language');
+                const buttons = document.querySelectorAll('.filter-btn');
+                // Remove active class from all buttons
+                buttons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                event.target.closest('.filter-btn').classList.add('active');
+                languages.forEach(lang => {
+                    if (category === '' || lang.dataset.category.includes(category)) {
+                        lang.style.display = 'flex';
+                    } else {
+                        lang.style.display = 'none';
+                    }
+                });
+            }
+        </script>
+    </body>
 </html>

@@ -52,12 +52,13 @@
 
 /* ---------------------------------------------------------------------------- */
 .hobbies-title {
-  writing-mode: vertical-rl;        /* Tailwind has no utility for writing-mode */
+  writing-mode: vertical-rl; /* Tailwind has no utility for writing-mode */
   text-orientation: sideways-right; /* Tailwind has no utility for text-orientation */
-  transform: rotate(180deg);        /* Tailwind supports rotate-* but only fixed angles; 180deg could use rotate-180 but combined with vertical-rl, keep custom */
+  transform: rotate(
+    180deg
+  ); /* Tailwind supports rotate-* but only fixed angles; 180deg could use rotate-180 but combined with vertical-rl, keep custom */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Tailwind cannot do custom text-shadow */
 }
-
 
 .interests-title {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
@@ -90,9 +91,15 @@
 .h-tag1:hover {
   transform: translateY(-5px) rotate(5deg);
 }
-.h-tag1:nth-child(1) { background: linear-gradient(45deg, #ff6a00, #ffb300);}
-.h-tag1:nth-child(2) { background: linear-gradient(45deg, #00b5ff, #1e90ff);}
-.h-tag1:nth-child(3) { background: linear-gradient(45deg, #9c27b0, #e91e63);}
+.h-tag1:nth-child(1) {
+  background: linear-gradient(45deg, #ff6a00, #ffb300);
+}
+.h-tag1:nth-child(2) {
+  background: linear-gradient(45deg, #00b5ff, #1e90ff);
+}
+.h-tag1:nth-child(3) {
+  background: linear-gradient(45deg, #9c27b0, #e91e63);
+}
 
 /* ---------------------------------------------------------------------------- */
 .h-tag {
@@ -126,3 +133,4 @@
 .h-tag:nth-child(7) {
   background: linear-gradient(45deg, #f9d423, #ff4e50);
 }
+
