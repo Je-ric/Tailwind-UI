@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/projects.css">
+</head>
+<body>
+       <div class="projects-container">
+                        <div class="project-list">
+                            <div class="project-item" onclick="openProject(event, 'Tab1')">
+                                <h3>Color Game</h3>
+                            </div>
+                            <div class="project-item" onclick="openProject(event, 'Tab2')">
+                                <h3>BeatStrum</h3>
+                            </div>
+                            <div class="project-item" onclick="openProject(event, 'Tab3')">
+                                <h3>Student Portal</h3>
+                            </div>
+                            <div class="project-item" onclick="openProject(event, 'Tab4')">
+                                <h3>Job Application Form</h3>
+                            </div>
+                            <div class="project-item" onclick="openProject(event, 'Tab5')">
+                                <h3>Concert Reservation System</h3>
+                            </div>
+                            <div class="project-item" onclick="openProject(event, 'Tab6')">
+                                <h3>CBAA Front-End Website</h3>
+                            </div>
+                        </div>
+                        <div id="projectDetails" class="project-details">
+                            <h2>Select a Project</h2>
+                            <p>Click on a project from the list to view its details.</p>
+                        </div>
+                
+                        
+                    <div id="Tab1" class="tabProjectContent">
+                        <h2>Color Game</h2>
+                        <img src="images/projects/colorgame.png" alt="Color Game image" class="project-image">
+                        <p>Developed an engaging Java color-matching game featuring three levels of difficulty—easy, medium, and hard—each with varying numbers of dice and colors for betting. This project uses the power of Java Swing for visually appealing graphics.</p>
+                        <div class="tags">
+                            <span class="tag">Java</span>
+                        </div>
+                    </div>
+                
+                    <div id="Tab2" class="tabProjectContent">
+                        <h2>BeatStrum</h2>
+                        <img src="images/projects/BeatStrum.png" alt="BeatStrum image" class="project-image">
+                        <p>Developed BeatStrum, an e-commerce website for musical instruments, using an object-oriented programming approach. The project features a user-friendly interface, categorized listings, and efficient product management.</p>
+                        <div class="tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">PHP</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">AJAX</span>
+                        </div>
+                    </div>
+                
+                    <div id="Tab3" class="tabProjectContent">
+                        <h2>Student Portal</h2>
+                        <img src="images/projects/StudentPortal.png" alt="Student Portal image" class="project-image">
+                        <p>Introducing a comprehensive Student Portal system built on Object-Oriented Programming principles. Seamlessly manage grading systems, update student records, and empower administrators with efficient information modification, all through intuitive interfaces tailored for both students and administrators.</p>
+                        <div class="tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">PHP</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">MySQL</span>
+                        </div>
+                    </div>
+                
+                    <div id="Tab4" class="tabProjectContent">
+                        <h2>Job Application Form</h2>
+                        <img src="images/projects/jobs.png" alt="Job Application Form image" class="project-image">
+                        <p>Designed a dynamic job application form with interactive fields allowing applicants to easily modify and update their submissions. Built functionality for administrators to review and manage applications, including the ability to delete redundant entries, simplifying the recruitment process effectively.</p>
+                        <div class="tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">PHP</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">MySQL</span>
+                        </div>
+                    </div>
+                
+                    <div id="Tab5" class="tabProjectContent">
+                        <h2>Concert Reservation System</h2>
+                        <img src="images/projects/Concert.png" alt="Concert Reservation System image" class="project-image">
+                        <p>Built a Concert Reservation System using Object-Oriented Programming, featuring user-friendly interfaces for both administrators and attendees. Users can effortlessly browse available concerts, reserve specific seats, receive email notifications, utilize various payment methods, and easily cancel reservations.</p>
+                        <div class="tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">PHP</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">AJAX</span>
+                        </div>
+                    </div>
+                
+                    <div id="Tab6" class="tabProjectContent">
+                        <h2>CBAA Front-End Website</h2>
+                        <img src="images/projects/cbaa.png" alt="CBAA Front-End Website image" class="project-image">
+                        <p>Developed a responsive website for the College of Business Administration and Accountancy (CBAA), emphasizing front-end development practices. The website effectively outlines the college's programs, courses, and faculty and staff while ensuring seamless viewing across various devices, enhancing user experience and accessibility.</p>
+                        <div class="tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                
+                    </div>
+        
+        </section>
+
+
+    
+        <!-- W3schools -->
+        <script>
+            function openProject(evt, projectName) {
+                var i, tabProjectContent, tablinks;
+                
+                tabProjectContent = document.getElementsByClassName("tabProjectContent");
+                for (i = 0; i < tabProjectContent.length; i++) {
+                    tabProjectContent[i].style.display = "none"; 
+                }
+            
+                tablinks = document.getElementsByClassName("project-item");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].classList.remove("active");
+                }
+            
+                document.getElementById('projectDetails').style.display = "none";    
+                document.getElementById(projectName).style.display = "block";
+            
+                evt.currentTarget.classList.add("active");
+            }
+        </script>
+
+</body>
+</html>
