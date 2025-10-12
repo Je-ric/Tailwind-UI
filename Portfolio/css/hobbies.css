@@ -15,13 +15,11 @@
     -6px -6px 10px rgba(255, 255, 255, 0.5),
     6px 6px 8px rgba(255, 255, 255, 0.075), 6px 6px 10px rgba(0, 0, 0, 0.15);
 }
-
 .icon-module:hover {
   box-shadow: -2px -2px 6px rgba(255, 255, 255, 0.6),
     -2px -2px 4px rgba(255, 255, 255, 0.4),
     2px 2px 2px rgba(255, 255, 255, 0.05), 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
-
 .icon-module:active {
   box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.7),
     inset -2px -2px 4px rgba(255, 255, 255, 0.5),
@@ -36,16 +34,10 @@
 
 /* ---------------------------------------------------------------------------- */
 
-.logo-tags {
-  display: grid;
-  grid-template-columns: repeat(3, 2fr);
-}
-
 .logo-tags img {
   height: auto;
   transition: all 0.2s ease;
 }
-
 .logo-tags img:hover {
   transform: scale(1.1);
 }
@@ -54,11 +46,9 @@
 .hobbies-title {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
-
 .interests-title {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
-
 .amp-title {
   text-shadow: 1px 1px 0 #000,
                -1px -1px 0 #000,
@@ -68,18 +58,6 @@
 
 /* ---------------------------------------------------------------------------- */
 
-.hobbies-right-top {
-  display: flex;
-  /* align-items: flex-start; */
-  justify-content: space-between;
-  border-bottom: 2px solid #ddd;
-}
-.hobbies-tags1 {
-  grid-template-columns: repeat(3, 1fr);
-  display: grid;
-  align-items: center;
-  gap: 10px;
-}
 .h-tag1 {
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1),
     -4px -4px 6px rgba(255, 255, 255, 0.9);
@@ -104,11 +82,9 @@
     -4px -4px 6px rgba(255, 255, 255, 0.9);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
-
 .h-tag:hover {
   transform: translateY(-5px) rotate(5deg);
 }
-
 .h-tag:nth-child(1) {
   background: linear-gradient(45deg, #ff6b6b, #f06a90);
 }

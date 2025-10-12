@@ -1,13 +1,10 @@
-
-.service-left h1{
-  line-height: 1;
+.service-left h1 {
   text-shadow: 2px 2px 5px #bebebe, -2px -2px 5px #ffffff;
 }
 
 .service-left p {
   text-shadow: 1px 1px 3px #bebebe, -1px -1px 3px #ffffff;
 }
-
 
 .service-right .service-item {
   box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
@@ -40,9 +37,8 @@
   text-shadow: 1px 1px 3px #bebebe, -1px -1px 3px #ffffff;
 }
 
-.service-group{
-box-shadow: inset 5px 5px 10px #cacaca,
-            inset -5px -5px 10px #f6f6f6;
+.service-group {
+  box-shadow: inset 5px 5px 10px #cacaca, inset -5px -5px 10px #f6f6f6;
 }
 
 .service-group:hover {
@@ -57,20 +53,15 @@ box-shadow: inset 5px 5px 10px #cacaca,
   transition: box-shadow 0.3s ease, transform 0.3s ease, background 0.3s ease, color 0.3s ease;
 }
 
-
-.service-group:nth-child(1) i{
-  background: linear-gradient(135deg, #F7ACCF, #FF1053); 
+.service-group:nth-child(1) i {
+  background: linear-gradient(135deg, #F7ACCF, #FF1053);
 }
-.service-group:nth-child(2) i{
-  background: linear-gradient(135deg, #00c6ff, #0072ff, #ac34f1); 
+.service-group:nth-child(2) i {
+  background: linear-gradient(135deg, #00c6ff, #0072ff, #ac34f1);
 }
-.service-group:nth-child(3) i{
-  background: linear-gradient(135deg, #ffcc00, #ff6600, #e56b46); 
+.service-group:nth-child(3) i {
+  background: linear-gradient(135deg, #ffcc00, #ff6600, #e56b46);
 }
-
-
-
-
 
 .services-title.v2 {
   writing-mode: vertical-lr;
@@ -85,19 +76,14 @@ box-shadow: inset 5px 5px 10px #cacaca,
   align-self: flex-start;
 }
 
-
-.whatido{
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 2px solid #ddd;
-  border-top: 2px solid #ddd;
+.whatido {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-.whatido .v1{
-  color: #e8e8e8; 
-  text-shadow: 
-    1px 1px 0 #000,  
+.whatido .v1 {
+  color: #e8e8e8;
+  text-shadow:
+    1px 1px 0 #000,
     -1px -1px 0 #000,
     1px -1px 0 #000,
     -1px 1px 0 #000;
