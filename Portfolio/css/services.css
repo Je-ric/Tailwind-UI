@@ -8,15 +8,8 @@
   text-shadow: 1px 1px 3px #bebebe, -1px -1px 3px #ffffff;
 }
 
-.service-left .service-buttons button:last-child {
-  background-color: #e0e0e0;
-}
 
 .service-right .service-item {
-  display: flex;
-  margin-bottom: 20px;
-  padding: 10px;
-  border-radius: 10px;
   box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -26,6 +19,7 @@
   box-shadow: 8px 8px 15px #bebebe, -8px -8px 15px #ffffff;
 }
 
+/* Gradient hover text + icon */
 .service-right .service-item:hover .service-content h3,
 .service-right .service-item:hover .service-content p,
 .service-right .service-item:hover i {
@@ -35,45 +29,30 @@
   text-shadow: none;
 }
 
-.service-right .service-item img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  margin-right: 10px;
-}
-
+/* Icon styling */
 .service-right .service-item i {
-  text-align: center;
-  vertical-align: middle;
   text-shadow: 1px 1px 3px #bebebe, -1px -1px 3px #ffffff;
-  font-size: 90px;
-  margin-right: 10px;
-  border-radius: 10px; 
 }
 
-.service-right .service-item .service-content {
-  flex: 1;
-}
-.service-right .service-item .service-content h3 {
-  font-size: 18px;
-  margin: 0 0 10px 0;
-  color: #333;
-  text-shadow: 1px 1px 3px #bebebe, -1px -1px 3px #ffffff;
-}
+/* Text styling */
+.service-right .service-item .service-content h3,
 .service-right .service-item .service-content p {
-  font-size: 14px;
-  margin: 0;
-  color: #333;
   text-shadow: 1px 1px 3px #bebebe, -1px -1px 3px #ffffff;
 }
 
+.service-group{
+box-shadow: inset 5px 5px 10px #cacaca,
+            inset -5px -5px 10px #f6f6f6;
+}
 
 .service-group:hover {
   transform: translateY(-5px);
 }
 
-/* Keep custom shadows and smooth hover effects */
 .service-group i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   box-shadow: 5px 5px 10px #b8bec5, -5px -5px 10px #ffffff;
   border: 2px solid #ffffff;
   transition: box-shadow 0.3s ease, transform 0.3s ease, background 0.3s ease, color 0.3s ease;
@@ -113,7 +92,7 @@
   justify-content: space-between;
   border-bottom: 2px solid #ddd;
   border-top: 2px solid #ddd;
-  padding: 7px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .whatido .v1{
