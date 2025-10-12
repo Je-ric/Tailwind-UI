@@ -1,125 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-        <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/projects.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/projects.css">
 </head>
-<body>
-       <div class="projects-container">
-                        <div class="project-list">
-                            <div class="project-item" onclick="openProject(event, 'Tab1')">
-                                <h3>Color Game</h3>
-                            </div>
-                            <div class="project-item" onclick="openProject(event, 'Tab2')">
-                                <h3>BeatStrum</h3>
-                            </div>
-                            <div class="project-item" onclick="openProject(event, 'Tab3')">
-                                <h3>Student Portal</h3>
-                            </div>
-                            <div class="project-item" onclick="openProject(event, 'Tab4')">
-                                <h3>Job Application Form</h3>
-                            </div>
-                            <div class="project-item" onclick="openProject(event, 'Tab5')">
-                                <h3>Concert Reservation System</h3>
-                            </div>
-                            <div class="project-item" onclick="openProject(event, 'Tab6')">
-                                <h3>CBAA Front-End Website</h3>
-                            </div>
-                        </div>
-                        <div id="projectDetails" class="project-details">
-                            <h2>Select a Project</h2>
-                            <p>Click on a project from the list to view its details.</p>
-                        </div>
-                
-                        
-                    <div id="Tab1" class="tabProjectContent">
-                        <h2>Color Game</h2>
-                        <img src="images/projects/colorgame.png" alt="Color Game image" class="project-image">
-                        <p>Developed an engaging Java color-matching game featuring three levels of difficulty—easy, medium, and hard—each with varying numbers of dice and colors for betting. This project uses the power of Java Swing for visually appealing graphics.</p>
-                        <div class="tags">
-                            <span class="tag">Java</span>
-                        </div>
-                    </div>
-                
-                    <div id="Tab2" class="tabProjectContent">
-                        <h2>BeatStrum</h2>
-                        <img src="images/projects/BeatStrum.png" alt="BeatStrum image" class="project-image">
-                        <p>Developed BeatStrum, an e-commerce website for musical instruments, using an object-oriented programming approach. The project features a user-friendly interface, categorized listings, and efficient product management.</p>
-                        <div class="tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">PHP</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">MySQL</span>
-                            <span class="tag">AJAX</span>
-                        </div>
-                    </div>
-                
-                    <div id="Tab3" class="tabProjectContent">
-                        <h2>Student Portal</h2>
-                        <img src="images/projects/StudentPortal.png" alt="Student Portal image" class="project-image">
-                        <p>Introducing a comprehensive Student Portal system built on Object-Oriented Programming principles. Seamlessly manage grading systems, update student records, and empower administrators with efficient information modification, all through intuitive interfaces tailored for both students and administrators.</p>
-                        <div class="tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">PHP</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">MySQL</span>
-                        </div>
-                    </div>
-                
-                    <div id="Tab4" class="tabProjectContent">
-                        <h2>Job Application Form</h2>
-                        <img src="images/projects/jobs.png" alt="Job Application Form image" class="project-image">
-                        <p>Designed a dynamic job application form with interactive fields allowing applicants to easily modify and update their submissions. Built functionality for administrators to review and manage applications, including the ability to delete redundant entries, simplifying the recruitment process effectively.</p>
-                        <div class="tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">PHP</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">MySQL</span>
-                        </div>
-                    </div>
-                
-                    <div id="Tab5" class="tabProjectContent">
-                        <h2>Concert Reservation System</h2>
-                        <img src="images/projects/Concert.png" alt="Concert Reservation System image" class="project-image">
-                        <p>Built a Concert Reservation System using Object-Oriented Programming, featuring user-friendly interfaces for both administrators and attendees. Users can effortlessly browse available concerts, reserve specific seats, receive email notifications, utilize various payment methods, and easily cancel reservations.</p>
-                        <div class="tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">PHP</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">MySQL</span>
-                            <span class="tag">AJAX</span>
-                        </div>
-                    </div>
-                
-                    <div id="Tab6" class="tabProjectContent">
-                        <h2>CBAA Front-End Website</h2>
-                        <img src="images/projects/cbaa.png" alt="CBAA Front-End Website image" class="project-image">
-                        <p>Developed a responsive website for the College of Business Administration and Accountancy (CBAA), emphasizing front-end development practices. The website effectively outlines the college's programs, courses, and faculty and staff while ensuring seamless viewing across various devices, enhancing user experience and accessibility.</p>
-                        <div class="tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JavaScript</span>
-                        </div>
-                    </div>
-                
-                    </div>
-        
-        </section>
 
+<body class="min-h-screen bg-gray-200 font-[Oswald] text-gray-800 selection:bg-gray-700 selection:text-white">
+  <div class="projects-container flex flex-col md:flex-row max-w-6xl w-full rounded-2xl overflow-hidden">
 
-    
-        <!-- W3schools -->
-        <script>
-            function openProject(evt, projectName) {
+    <!-- Project List -->
+    <div class="project-list w-full md:w-1/3 p-6 flex flex-col gap-4 border-r border-gray-200">
+      <div class="project-item cursor-pointer p-4 rounded-lg transition-all"
+        onclick="openProject(event, 'Tab1')">
+        <h3 class="text-gray-800 text-lg font-medium">Color Game</h3>
+      </div>
+      <div class="project-item cursor-pointer p-4 rounded-lg transition-all"
+        onclick="openProject(event, 'Tab2')">
+        <h3 class="text-gray-800 text-lg font-medium">BeatStrum</h3>
+      </div>
+      <div class="project-item cursor-pointer p-4 rounded-lg transition-all"
+        onclick="openProject(event, 'Tab3')">
+        <h3 class="text-gray-800 text-lg font-medium">Student Portal</h3>
+      </div>
+      <div class="project-item cursor-pointer p-4 rounded-lg transition-all"
+        onclick="openProject(event, 'Tab4')">
+        <h3 class="text-gray-800 text-lg font-medium">Job Application Form</h3>
+      </div>
+      <div class="project-item cursor-pointer p-4 rounded-lg transition-all"
+        onclick="openProject(event, 'Tab5')">
+        <h3 class="text-gray-800 text-lg font-medium">Concert Reservation System</h3>
+      </div>
+      <div class="project-item cursor-pointer p-4 rounded-lg transition-all"
+        onclick="openProject(event, 'Tab6')">
+        <h3 class="text-gray-800 text-lg font-medium">CBAA Front-End Website</h3>
+      </div>
+    </div>
+
+    <!-- Project Details Container -->
+    <div class="flex-1 p-6 relative overflow-y-auto">
+      <div id="project-content">
+        <!-- Default Info -->
+        <div id="projectDetails" class="project-details text-center md:text-left">
+          <h2 class="text-3xl font-semibold mb-4">Select a Project</h2>
+          <p class="text-gray-600 text-lg">Click on a project from the list to view its details.</p>
+        </div>
+
+        <!-- Project Tabs -->
+        <div id="Tab1" class="tabProjectContent hidden">
+          <h2 class="text-3xl font-semibold mb-4">Color Game</h2>
+          <img src="images/projects/colorgame.png" alt="Color Game image" class="w-full max-w-md rounded-lg mb-4 shadow-md">
+          <p class="text-gray-700 text-base leading-relaxed mb-4">
+            Developed an engaging Java color-matching game featuring three levels of difficulty—easy, medium, and hard—each with varying numbers of dice and colors for betting. This project uses Java Swing for visually appealing graphics.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="tag text-gray-700 px-4 py-1 rounded-full text-sm">Java</span>
+          </div>
+        </div>
+
+        <div id="Tab2" class="tabProjectContent hidden">
+          <h2 class="text-3xl font-semibold mb-4">BeatStrum</h2>
+          <img src="images/projects/BeatStrum.png" alt="BeatStrum image" class="w-full max-w-md rounded-lg mb-4 shadow-md">
+          <p class="text-gray-700 text-base leading-relaxed mb-4">
+            Developed BeatStrum, an e-commerce website for musical instruments, using OOP. It features a user-friendly interface, categorized listings, and efficient product management.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="tag text-gray-700 px-4 py-1 rounded-full text-sm">HTML</span>
+            <span class="tag text-gray-700 px-4 py-1 rounded-full text-sm">CSS</span>
+            <span class="tag text-gray-700 px-4 py-1 rounded-full text-sm">PHP</span>
+            <span class="tag text-gray-700 px-4 py-1 rounded-full text-sm">JavaScript</span>
+            <span class="tag text-gray-700 px-4 py-1 rounded-full text-sm">MySQL</span>
+            <span class="tag text-gray-700 px-4 py-1 rounded-full text-sm">AJAX</span>
+          </div>
+        </div>
+
+        <div id="Tab3" class="tabProjectContent hidden">
+          <h2 class="text-3xl font-semibold mb-4">Student Portal</h2>
+          <img src="images/projects/StudentPortal.png" alt="Student Portal image" class="w-full max-w-md rounded-lg mb-4 shadow-md">
+          <p class="text-gray-700 text-base leading-relaxed mb-4">
+            A Student Portal system built with OOP principles. Manage grading systems, update records, and empower admins with efficient data control.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="tag text-gray-700 px-4 py-1 rounded-full text-sm">HTML</span>
+            <span class="tag text-gray-700 px-4 py-1 rounded-full text-sm">CSS</span>
+            <span class="tag text-gray-700 px-4 py-1 rounded-full text-sm">PHP</span>
+            <span class="tag text-gray-700 px-4 py-1 rounded-full text-sm">JavaScript</span>
+            <span class="tag text-gray-700 px-4 py-1 rounded-full text-sm">MySQL</span>
+          </div>
+        </div>
+
+        <div id="Tab4" class="tabProjectContent hidden">
+          <h2 class="text-3xl font-semibold mb-4">Job Application Form</h2>
+          <img src="images/projects/jobs.png" alt="Job Application Form image" class="w-full max-w-md rounded-lg mb-4 shadow-md">
+          <p class="text-gray-700 text-base leading-relaxed mb-4">
+            A dynamic job application form with editable fields and admin review capabilities to simplify recruitment.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="tag text-gray-700 px-4 py-1 rounded-full text-sm">HTML</span>
+            <span class="tag text-gray-700 px-4 py-1 rounded-full text-sm">CSS</span>
+            <span class="tag text-gray-700 px-4 py-1 rounded-full text-sm">PHP</span>
+            <span class="tag text-gray-700 px-4 py-1 rounded-full text-sm">JavaScript</span>
+            <span class="tag text-gray-700 px-4 py-1 rounded-full text-sm">MySQL</span>
+          </div>
+        </div>
+
+        <div id="Tab5" class="tabProjectContent hidden">
+          <h2 class="text-3xl font-semibold mb-4">Concert Reservation System</h2>
+          <img src="images/projects/Concert.png" alt="Concert Reservation System image" class="w-full max-w-md rounded-lg mb-4 shadow-md">
+          <p class="text-gray-700 text-base leading-relaxed mb-4">
+            A Concert Reservation System featuring seat selection, email notifications, and admin management.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="tag text-gray-700 px-4 py-1 rounded-full text-sm">HTML</span>
+            <span class="tag text-gray-700 px-4 py-1 rounded-full text-sm">CSS</span>
+            <span class="tag text-gray-700 px-4 py-1 rounded-full text-sm">PHP</span>
+            <span class="tag text-gray-700 px-4 py-1 rounded-full text-sm">JavaScript</span>
+            <span class="tag text-gray-700 px-4 py-1 rounded-full text-sm">MySQL</span>
+            <span class="tag text-gray-700 px-4 py-1 rounded-full text-sm">AJAX</span>
+          </div>
+        </div>
+
+        <div id="Tab6" class="tabProjectContent hidden">
+          <h2 class="text-3xl font-semibold mb-4">CBAA Front-End Website</h2>
+          <img src="images/projects/cbaa.png" alt="CBAA Front-End Website image" class="w-full max-w-md rounded-lg mb-4 shadow-md">
+          <p class="text-gray-700 text-base leading-relaxed mb-4">
+            A responsive front-end site for CBAA showcasing programs, courses, and faculty info with cross-device support.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="tag text-gray-700 px-4 py-1 rounded-full text-sm">HTML</span>
+            <span class="tag text-gray-700 px-4 py-1 rounded-full text-sm">CSS</span>
+            <span class="tag text-gray-700 px-4 py-1 rounded-full text-sm">JavaScript</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+      function openProject(evt, projectName) {
                 var i, tabProjectContent, tablinks;
                 
                 tabProjectContent = document.getElementsByClassName("tabProjectContent");
@@ -137,7 +159,6 @@
             
                 evt.currentTarget.classList.add("active");
             }
-        </script>
-
+  </script>
 </body>
 </html>
