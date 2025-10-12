@@ -54,7 +54,6 @@ box-shadow: inset 5px 5px 10px #cacaca,
   justify-content: center;
   align-items: center;
   box-shadow: 5px 5px 10px #b8bec5, -5px -5px 10px #ffffff;
-  border: 2px solid #ffffff;
   transition: box-shadow 0.3s ease, transform 0.3s ease, background 0.3s ease, color 0.3s ease;
 }
 
