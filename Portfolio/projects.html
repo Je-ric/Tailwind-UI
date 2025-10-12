@@ -141,24 +141,21 @@
   </div>
 
   <script>
-      function openProject(evt, projectName) {
-                var i, tabProjectContent, tablinks;
-                
-                tabProjectContent = document.getElementsByClassName("tabProjectContent");
-                for (i = 0; i < tabProjectContent.length; i++) {
-                    tabProjectContent[i].style.display = "none"; 
-                }
-            
-                tablinks = document.getElementsByClassName("project-item");
-                for (i = 0; i < tablinks.length; i++) {
-                    tablinks[i].classList.remove("active");
-                }
-            
-                document.getElementById('projectDetails').style.display = "none";    
-                document.getElementById(projectName).style.display = "block";
-            
-                evt.currentTarget.classList.add("active");
-            }
+  function openProject(evt, projectName) {
+    // Hide all tab contents
+    document.querySelectorAll(".tabProjectContent").forEach(el => el.classList.add("hidden"));
+    // Remove active styles from all project items and their h3
+    document.querySelectorAll(".project-item").forEach(el => {
+      el.classList.remove("active", "bg-gradient-to-r", "from-purple-600", "to-blue-500");
+      el.querySelector("h3").classList.remove("text-white");
+    });
+    // Hide default info
+    document.getElementById("projectDetails").classList.add("hidden");
+    // Show selected tab
+    document.getElementById(projectName).classList.remove("hidden");
+    // Add active styles to clicked item and its h3
+    evt.currentTarget.classList.add("active", "bg-gradient-to-r", "from-purple-600", "to-blue-500");
+  }
   </script>
 </body>
 </html>
