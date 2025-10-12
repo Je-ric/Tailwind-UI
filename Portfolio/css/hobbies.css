@@ -52,21 +52,18 @@
 
 /* ---------------------------------------------------------------------------- */
 .hobbies-title {
-  writing-mode: vertical-rl; /* Tailwind has no utility for writing-mode */
-  text-orientation: sideways-right; /* Tailwind has no utility for text-orientation */
-  transform: rotate(
-    180deg
-  ); /* Tailwind supports rotate-* but only fixed angles; 180deg could use rotate-180 but combined with vertical-rl, keep custom */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Tailwind cannot do custom text-shadow */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .interests-title {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-.interests-title span {
-  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
-    -1px 1px 0 #000;
+.amp-title {
+  text-shadow: 1px 1px 0 #000,
+               -1px -1px 0 #000,
+               1px -1px 0 #000,
+               -1px 1px 0 #000;
 }
 
 /* ---------------------------------------------------------------------------- */

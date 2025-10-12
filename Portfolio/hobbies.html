@@ -7,99 +7,76 @@
         <script src="https://cdn.tailwindcss.com"></script>
         <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet" />
-        <link rel="stylesheet" href="css/experience.css" />
         <link rel="stylesheet" href="css/hobbies.css" />
     </head>
     <body class="min-h-screen bg-gray-200 font-[Oswald] text-gray-800 selection:bg-gray-700 selection:text-white">
-        <div class="mx-4 md:mx-8 lg:mx-16 my-8" id="hobbies-container">
-            <div class="flex flex-col lg:flex-row border-b-2 border-gray-300">
-                <div class="text-center lg:text-left order-2 lg:order-1">
-                    <h1 class="hobbies-title text-5xl font-bold lg:text-6xl tracking-widest pt-5 lg:pt-5 border-l-2 border-gray-300 text-gray-800 pl-5"> HOBBIES </h1>
-                </div>
+        <div class="mx-4 sm:mx-6 lg:mx-16 my-8 space-y-6" id="hobbies-container">
+            <!-- Main Section -->
+            <div class="flex flex-col lg:flex-row border-b-2 border-gray-300 pb-6">
                 <!-- Right Section - Interests Content -->
                 <div class="flex-1 flex flex-col justify-evenly order-1 lg:order-2">
-                    <!-- Top Section with Title and Tags -->
-                    <div class="flex flex-col lg:flex-row justify-between border-b-2 border-gray-300 pb-4 lg:pb-5 space-y-4 lg:space-y-0">
-                        <h1 class="interests-title text-4xl font-bold lg:text-6xl leading-none text-left tracking-widest text-gray-200 pl-5 lg:pl-5">
-                            <span>&</span> INTERESTS
+                    <!-- Title & Tags -->
+                    <div class="flex flex-col lg:flex-row justify-between items-center lg:items-end border-b-2 border-gray-300 pb-4 lg:pb-5 space-y-4 lg:space-y-0">
+                        <h1 class="text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight text-center lg:text-left tracking-widest text-gray-200">
+                            <span class="hobbies-title text-gray-800">HOBBIES</span>
+                            <span class="amp-title mx-1 sm:mx-2">&</span>
+                            <span class="interests-title text-gray-200">INTERESTS</span>
                         </h1>
-                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 lg:gap-2 items-center px-4 lg:px-0">
-                            <span class="h-tag1 px-2 py-1 lg:px-2 lg:py-1 text-white font-bold text-center rounded-2xl transition-all duration-200 text-sm lg:text-base">Life</span>
-                            <span class="h-tag1 px-2 py-1 lg:px-2 lg:py-1 text-white font-bold text-center rounded-2xl transition-all duration-200 text-sm lg:text-base">Beyond</span>
-                            <span class="h-tag1 px-2 py-1 lg:px-2 lg:py-1 text-white font-bold text-center rounded-2xl transition-all duration-200 text-sm lg:text-base">Design</span>
+                        <div class="grid grid-cols-3 gap-2 sm:gap-3 items-center px-2 sm:px-4">
+                            <span class="h-tag1 px-3 py-1 text-white font-bold text-center rounded-2xl text-xs sm:text-sm md:text-base">Life</span>
+                            <span class="h-tag1 px-3 py-1 text-white font-bold text-center rounded-2xl text-xs sm:text-sm md:text-base">Beyond</span>
+                            <span class="h-tag1 px-3 py-1 text-white font-bold text-center rounded-2xl text-xs sm:text-sm md:text-base">Design</span>
                         </div>
                     </div>
-                    <!-- Main Content Grid -->
-                    <div class="flex flex-col lg:flex-row gap-5 pl-5 lg:pl-5 pt-5 lg:pt-5">
-                        <!-- Group 1 - Floating Tags -->
+                    <!-- Content Section -->
+                    <div class="flex flex-col lg:flex-row gap-6 pl-2 sm:pl-5 pt-5 lg:pt-6">
+                        <!-- Floating Tags -->
                         <div class="lg:flex-shrink-0">
-                            <div class="flex flex-row lg:flex-col flex-wrap lg:flex-nowrap justify-start lg:justify-baseline gap-4 lg:gap-4">
-                                <div class="floating-tag px-5 py-2 lg:px-5 lg:py-2 rounded-3xl text-gray-800 font-bold transition-all duration-300 text-sm lg:text-base">
+                            <div class="flex flex-row lg:flex-col flex-wrap lg:flex-nowrap justify-start gap-3 lg:gap-4">
+                                <div class="floating-tag px-4 py-2 rounded-3xl text-gray-800 font-bold transition-all duration-300 text-sm sm:text-base">
                                     <i class="bx bx-music"></i> Listening to Music
                                 </div>
-                                <div class="floating-tag px-5 py-2 lg:px-5 lg:py-2 rounded-3xl text-gray-800 font-bold transition-all duration-300 text-sm lg:text-base">
+                                <div class="floating-tag px-4 py-2 rounded-3xl text-gray-800 font-bold transition-all duration-300 text-sm sm:text-base">
                                     <i class="bx bx-leaf"></i> Nature
                                 </div>
-                                <div class="floating-tag px-5 py-2 lg:px-5 lg:py-2 rounded-3xl text-gray-800 font-bold transition-all duration-300 text-sm lg:text-base">
+                                <div class="floating-tag px-4 py-2 rounded-3xl text-gray-800 font-bold transition-all duration-300 text-sm sm:text-base">
                                     <i class="bx bx-chip"></i> Technology
                                 </div>
-                                <div class="floating-tag px-5 py-2 lg:px-5 lg:py-2 rounded-3xl text-gray-800 font-bold transition-all duration-300 text-sm lg:text-base">
+                                <div class="floating-tag px-4 py-2 rounded-3xl text-gray-800 font-bold transition-all duration-300 text-sm sm:text-base">
                                     <i class="bx bx-cart"></i> E-Commerce
                                 </div>
                             </div>
                         </div>
-                        <!-- Group 2 - Icon Modules -->
-                        <div class="flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-5">
-                            <div class="icon-module flex justify-around items-center p-4 lg:p-4 rounded-lg transition-all duration-200 cursor-text mb-5 lg:mb-5 hover:text-blue-400">
-                                <div class="icon-link">
-                                    <img src="images/hobby_interest/drums.png" alt="Drums" class="icon-img w-12 h-auto rounded-full" />
-                                </div>
-                                <span class="icon-label text-base lg:text-base text-center font-bold">Playing Drums</span>
+                        <!-- Icon Grid -->
+                        <div class="flex-1 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4">
+                            <div class="icon-module flex flex-col sm:flex-row justify-center items-center p-3 sm:p-4 rounded-lg transition-all duration-200 hover:text-blue-400">
+                                <img src="images/hobby_interest/drums.png" alt="Drums" class="icon-img w-10 sm:w-12 h-auto rounded-full" />
+                                <span class="icon-label mt-2 sm:mt-0 sm:ml-2 text-sm sm:text-base text-center font-bold">Playing Drums</span>
                             </div>
-                            <div class="icon-module flex justify-around items-center p-4 lg:p-4 rounded-lg transition-all duration-200 cursor-text mb-5 lg:mb-5 hover:text-blue-400">
-                                <div class="icon-link">
-                                    <img src="images/hobby_interest/scifi.png" alt="Sci-Fi" class="icon-img w-12 h-auto rounded-full" />
-                                </div>
-                                <span class="icon-label text-base lg:text-base text-center font-bold">Science Fiction</span>
+                            <div class="icon-module flex flex-col sm:flex-row justify-center items-center p-3 sm:p-4 rounded-lg transition-all duration-200 hover:text-blue-400">
+                                <img src="images/hobby_interest/scifi.png" alt="Sci-Fi" class="icon-img w-10 sm:w-12 h-auto rounded-full" />
+                                <span class="icon-label mt-2 sm:mt-0 sm:ml-2 text-sm sm:text-base text-center font-bold">Science Fiction</span>
                             </div>
-                            <div class="icon-module flex justify-around items-center p-4 lg:p-4 rounded-lg transition-all duration-200 cursor-text mb-5 lg:mb-5 hover:text-blue-400">
-                                <div class="icon-link">
-                                    <img src="images/hobby_interest/browse.png" alt="Browse" class="icon-img w-12 h-auto rounded-full" />
-                                </div>
-                                <span class="icon-label text-base lg:text-base text-center font-bold">Browsing Internet</span>
+                            <div class="icon-module flex flex-col sm:flex-row justify-center items-center p-3 sm:p-4 rounded-lg transition-all duration-200 hover:text-blue-400">
+                                <img src="images/hobby_interest/browse.png" alt="Browse" class="icon-img w-10 sm:w-12 h-auto rounded-full" />
+                                <span class="icon-label mt-2 sm:mt-0 sm:ml-2 text-sm sm:text-base text-center font-bold">Browsing Internet</span>
                             </div>
-                            <div class="icon-module flex justify-around items-center p-4 lg:p-4 rounded-lg transition-all duration-200 cursor-text mb-5 lg:mb-5 hover:text-blue-400">
-                                <div class="icon-link">
-                                    <img src="images/hobby_interest/watch.png" alt="Movies" class="icon-img w-12 h-auto rounded-full" />
-                                </div>
-                                <span class="icon-label text-base lg:text-base text-center font-bold">Watching Movies</span>
+                            <div class="icon-module flex flex-col sm:flex-row justify-center items-center p-3 sm:p-4 rounded-lg transition-all duration-200 hover:text-blue-400">
+                                <img src="images/hobby_interest/watch.png" alt="Movies" class="icon-img w-10 sm:w-12 h-auto rounded-full" />
+                                <span class="icon-label mt-2 sm:mt-0 sm:ml-2 text-sm sm:text-base text-center font-bold">Watching Movies</span>
                             </div>
-                            <div class="icon-module flex justify-around items-center p-4 lg:p-4 rounded-lg transition-all duration-200 cursor-text mb-5 lg:mb-5 hover:text-blue-400">
-                                <div class="icon-link">
-                                    <img src="images/hobby_interest/games.png" alt="Games" class="icon-img w-12 h-auto rounded-full" />
-                                </div>
-                                <span class="icon-label text-base lg:text-base text-center font-bold">Online Games</span>
+                            <div class="icon-module flex flex-col sm:flex-row justify-center items-center p-3 sm:p-4 rounded-lg transition-all duration-200 hover:text-blue-400">
+                                <img src="images/hobby_interest/games.png" alt="Games" class="icon-img w-10 sm:w-12 h-auto rounded-full" />
+                                <span class="icon-label mt-2 sm:mt-0 sm:ml-2 text-sm sm:text-base text-center font-bold">Online Games</span>
                             </div>
                             <div class="icon-logo">
                                 <div class="logo-tags grid grid-cols-3 gap-2">
-                                    <span class="l-tag">
-                                        <img src="images/hobby_interest/supercell.jpg" alt="Supercell" class="w-12 h-auto transition-all duration-200 hover:scale-110" />
-                                    </span>
-                                    <span class="l-tag">
-                                        <img src="images/hobby_interest/cs.png" alt="CS" class="w-12 h-auto transition-all duration-200 hover:scale-110" />
-                                    </span>
-                                    <span class="l-tag">
-                                        <img src="images/hobby_interest/ea.png" alt="EA" class="w-12 h-auto transition-all duration-200 hover:scale-110" />
-                                    </span>
-                                    <span class="l-tag">
-                                        <img src="images/hobby_interest/ac.png" alt="AC" class="w-12 h-auto transition-all duration-200 hover:scale-110" />
-                                    </span>
-                                    <span class="l-tag">
-                                        <img src="images/hobby_interest/lol-logo.png" alt="LOL" class="w-12 h-auto transition-all duration-200 hover:scale-110" />
-                                    </span>
-                                    <span class="l-tag">
-                                        <img src="images/hobby_interest/cod.svg" alt="COD" class="w-12 h-auto transition-all duration-200 hover:scale-110" />
-                                    </span>
+                                    <img src="images/hobby_interest/supercell.jpg" alt="Supercell" class="w-10 sm:w-12 h-auto transition-all duration-200 hover:scale-110 rounded-full" />
+                                    <img src="images/hobby_interest/cs.png" alt="CS" class="w-10 sm:w-12 h-auto transition-all duration-200 hover:scale-110 rounded-full" />
+                                    <img src="images/hobby_interest/ea.png" alt="EA" class="w-10 sm:w-12 h-auto transition-all duration-200 hover:scale-110 rounded-full" />
+                                    <img src="images/hobby_interest/ac.png" alt="AC" class="w-10 sm:w-12 h-auto transition-all duration-200 hover:scale-110 rounded-full" />
+                                    <img src="images/hobby_interest/lol-logo.png" alt="LOL" class="w-10 sm:w-12 h-auto transition-all duration-200 hover:scale-110 rounded-full" />
+                                    <img src="images/hobby_interest/cod.svg" alt="COD" class="w-10 sm:w-12 h-auto transition-all duration-200 hover:scale-110 rounded-full" />
                                 </div>
                             </div>
                         </div>
@@ -107,15 +84,15 @@
                 </div>
             </div>
             <!-- Bottom Marquee Section -->
-            <div class="marquee border-b-2 border-gray-300 mt-2 pb-2">
-                <div class="hobbies-tags flex justify-center flex-wrap gap-8 lg:gap-15">
-                    <span class="h-tag px-2 py-1 lg:px-2 lg:py-1 text-white font-bold rounded-2xl transition-all duration-200 text-sm lg:text-base">Gadgets</span>
-                    <span class="h-tag px-2 py-1 lg:px-2 lg:py-1 text-white font-bold rounded-2xl transition-all duration-200 text-sm lg:text-base">Stationery</span>
-                    <span class="h-tag px-2 py-1 lg:px-2 lg:py-1 text-white font-bold rounded-2xl transition-all duration-200 text-sm lg:text-base">Marvel</span>
-                    <span class="h-tag px-2 py-1 lg:px-2 lg:py-1 text-white font-bold rounded-2xl transition-all duration-200 text-sm lg:text-base">Neumorphism</span>
-                    <span class="h-tag px-2 py-1 lg:px-2 lg:py-1 text-white font-bold rounded-2xl transition-all duration-200 text-sm lg:text-base">K-Drama</span>
-                    <span class="h-tag px-2 py-1 lg:px-2 lg:py-1 text-white font-bold rounded-2xl transition-all duration-200 text-sm lg:text-base">Animation</span>
-                    <span class="h-tag px-2 py-1 lg:px-2 lg:py-1 text-white font-bold rounded-2xl transition-all duration-200 text-sm lg:text-base">Technology</span>
+            <div class="border-b-2 border-gray-300 mt-4 pb-4">
+                <div class="hobbies-tags flex justify-center flex-wrap gap-3 sm:gap-6 md:gap-10">
+                    <span class="h-tag px-3 py-1 text-white font-bold rounded-2xl text-xs sm:text-sm md:text-base">Gadgets</span>
+                    <span class="h-tag px-3 py-1 text-white font-bold rounded-2xl text-xs sm:text-sm md:text-base">Stationery</span>
+                    <span class="h-tag px-3 py-1 text-white font-bold rounded-2xl text-xs sm:text-sm md:text-base">Marvel</span>
+                    <span class="h-tag px-3 py-1 text-white font-bold rounded-2xl text-xs sm:text-sm md:text-base">Neumorphism</span>
+                    <span class="h-tag px-3 py-1 text-white font-bold rounded-2xl text-xs sm:text-sm md:text-base">K-Drama</span>
+                    <span class="h-tag px-3 py-1 text-white font-bold rounded-2xl text-xs sm:text-sm md:text-base">Animation</span>
+                    <span class="h-tag px-3 py-1 text-white font-bold rounded-2xl text-xs sm:text-sm md:text-base">Technology</span>
                 </div>
             </div>
         </div>
