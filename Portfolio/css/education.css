@@ -50,18 +50,10 @@
   border-radius: 50%;
 }
 
-.circle.c1::before {
-  background: linear-gradient(135deg, #fc00ff, #00dbde);
-}
-.circle.c2::before {
-  background: linear-gradient(135deg, #f12711, #f5af19);
-}
-.circle.c3::before {
-  background: linear-gradient(135deg, #f4c4f3, #fc67fa);
-}
-.circle.c4::before {
-  background: linear-gradient(135deg, #dce35b, #45b649);
-}
+.circle.c1::before { background: linear-gradient(135deg, #fc00ff, #00dbde); }
+.circle.c2::before { background: linear-gradient(135deg, #f12711, #f5af19); }
+.circle.c3::before { background: linear-gradient(135deg, #f4c4f3, #fc67fa); }
+.circle.c4::before { background: linear-gradient(135deg, #dce35b, #45b649); }
 
 .inner-circle {
   background: #e0e5ec;

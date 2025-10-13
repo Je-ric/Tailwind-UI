@@ -80,21 +80,11 @@
     -4px -4px 6px rgba(255, 255, 255, 0.9);
 }
 
-.filter-btn:nth-child(1) {
-  background: linear-gradient(45deg, #f9d423, #ff4e50);
-}
-.filter-btn:nth-child(2) {
-  background: linear-gradient(45deg, #7f00ff, #e100ff);
-}
-.filter-btn:nth-child(3) {
-  background: linear-gradient(45deg, #00c6ff, #1c84d2);
-}
-.filter-btn:nth-child(4) {
-  background: linear-gradient(45deg, #16e06a, #29b6f6);
-}
-.filter-btn:nth-child(5) {
-  background: linear-gradient(45deg, #c31432, #240b36);
-}
+.filter-btn:nth-child(1) { background: linear-gradient(45deg, #f9d423, #ff4e50); }
+.filter-btn:nth-child(2) { background: linear-gradient(45deg, #7f00ff, #e100ff); }
+.filter-btn:nth-child(3) { background: linear-gradient(45deg, #00c6ff, #1c84d2); }
+.filter-btn:nth-child(4) { background: linear-gradient(45deg, #16e06a, #29b6f6); }
+.filter-btn:nth-child(5) { background: linear-gradient(45deg, #c31432, #240b36); }
 
 .filter-btn:hover {
   transform: skew(-5deg) translateY(-6px);
