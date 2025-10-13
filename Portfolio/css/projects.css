@@ -1,7 +1,7 @@
-/* Only custom styles not covered by Tailwind */
+
 
 .projects-container {
-  /* Layout handled by Tailwind: flex, max-w-6xl, w-full, rounded-2xl, overflow-hidden */
+ 
   height: 600px;
   justify-content: space-between;
 }
@@ -20,12 +20,12 @@
 }
 
 .project-list {
-  /* Layout handled by Tailwind: w-full, md:w-1/3, p-6, flex, flex-col, gap-4, border-r, border-gray-200 */
+ 
   transition: all 0.3s ease;
 }
 
 .project-item {
-  /* Layout handled by Tailwind: cursor-pointer, p-4, rounded-lg, transition-all */
+ 
   box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
@@ -63,7 +63,7 @@
 }
 
 .tabProjectContent {
-  /* display: none; */
+ 
   padding: 6px 12px;
   border-top: none;
 }
@@ -78,7 +78,7 @@
 
 .tabProjectContent p,
 .project-details p {
-  /* Typography handled by Tailwind: text-gray-700, text-base, leading-relaxed, mb-4 */
+ 
   color: #4a5568;
   font-size: 1.1em;
   line-height: 1.6;
@@ -115,7 +115,7 @@
 }
 
 @media (max-width: 768px) {
-  /* Responsive handled by Tailwind: flex-col, w-full, etc. */
+ 
   .projects-container {
     height: auto;
   }

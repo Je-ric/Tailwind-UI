@@ -1,6 +1,6 @@
-/* Only keep custom styles not covered by Tailwind */
 
-/* Custom box-shadow variable for neumorphism */
+
+
 :root {
   --default-box-shadow: 4px 4px 8px #a3b1c6, -4px -4px 8px #ffffff;
   --inset-box-shadow: inset 3px 3px 6px #a3b1c6, inset -3px -3px 6px #ffffff;
@@ -10,7 +10,7 @@
   --inspiration-img-shadow: 2px 2px 4px #ccc, -2px -2px 4px #fff;
 }
 
-/* Custom shadows and transitions not in Tailwind */
+
 .dt-tag {
   box-shadow: var(--default-box-shadow);
   transition: all 0.3s ease;
@@ -19,7 +19,7 @@
   transform: translateY(-5px);
 }
 
-/* Custom inset shadow for learning tags */
+
 .lr-tag-group {
   box-shadow: var(--default-box-shadow);
 }
@@ -28,7 +28,7 @@
   transition: background 0.3s ease, transform 0.3s ease;
 }
 
-/* Custom box-shadow for version tags */
+
 .v-tag {
   box-shadow: var(--default-box-shadow);
   position: relative;
@@ -57,7 +57,7 @@
   z-index: 1;
 }
 
-/* Custom gradients for version tags */
+
 .v-tag:nth-child(1) {
   background: linear-gradient(135deg, #333333, #6e6e6e);
 }
@@ -68,7 +68,7 @@
   background: linear-gradient(135deg, #007bff, #72c6ff);
 }
 
-/* Custom box-shadow for productivity tags */
+
 .p-tag {
   box-shadow: var(--default-box-shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
@@ -80,7 +80,7 @@
   box-shadow: var(--inset-box-shadow);
 }
 
-/* Custom box-shadow for design tags */
+
 .d-tag {
   box-shadow: var(--default-box-shadow);
   transition: transform 0.3s ease;
@@ -92,7 +92,7 @@
   box-shadow: inset 3px 3px 5px #bebebe, inset -3px -3px 5px #ffffff;
 }
 
-/* Custom box-shadow for inspiration tags */
+
 .i-tag-outer {
   box-shadow: var(--inspiration-outer-shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -109,7 +109,7 @@
   box-shadow: var(--inspiration-img-shadow);
 }
 
-/* Responsive tweaks for inspiration tags */
+
 @media (max-width: 640px) {
   .i-tag-group {
     gap: 8px;

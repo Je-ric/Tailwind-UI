@@ -1,5 +1,5 @@
 .profile-top {
-    /* margin-top: 50px; */
+   
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -23,7 +23,7 @@
   }
   
 
-  /* Profile Top */
+ 
   
   .profile {
       margin-top: 30px;
@@ -106,14 +106,14 @@
   
   
 
-/* Profile Mid */
+
 
   .profile-bullet-text {
       padding-top: 5px;
     }
   
   .profile-bullet-text li{
-    /* color: #1da1f2; */
+   
   padding: 3px 0 8px 8px;
   margin-right: 30px;
   margin-bottom: 8px;
@@ -137,12 +137,7 @@
     -webkit-text-fill-color: transparent;
   }
   
-  /* .profile-bullet-text li::before {
-    content: "⚙️"; 
-    margin-right: 8px; 
-    font-size: 16px;
-    color: #1da1f2; 
-  } */
+ 
   
   .motto{
       margin-top: 10px;
@@ -157,7 +152,7 @@
 
 
 
-/* Profile Bottom */
+
 .profile-bottom p{
   padding-bottom: 6px;
   color: #2f2e2e;

@@ -16,7 +16,7 @@
   box-shadow: 8px 8px 15px #bebebe, -8px -8px 15px #ffffff;
 }
 
-/* Gradient hover text + icon */
+
 .service-right .service-item:hover .service-content h3,
 .service-right .service-item:hover .service-content p,
 .service-right .service-item:hover i {
@@ -26,12 +26,12 @@
   text-shadow: none;
 }
 
-/* Icon styling */
+
 .service-right .service-item i {
   text-shadow: 1px 1px 3px #bebebe, -1px -1px 3px #ffffff;
 }
 
-/* Text styling */
+
 .service-right .service-item .service-content h3,
 .service-right .service-item .service-content p {
   text-shadow: 1px 1px 3px #bebebe, -1px -1px 3px #ffffff;

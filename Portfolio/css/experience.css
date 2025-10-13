@@ -80,7 +80,7 @@
     -4px -4px 6px rgba(255, 255, 255, 0.9);
 }
 
-/* Individual button gradients */
+
 .filter-btn:nth-child(1) {
   background: linear-gradient(45deg, #f9d423, #ff4e50);
 }
@@ -97,20 +97,20 @@
   background: linear-gradient(45deg, #c31432, #240b36);
 }
 
-/* Hover effects */
+
 .filter-btn:hover {
   transform: skew(-5deg) translateY(-6px);
   color: #333;
 }
 
-/* Active button inset effect */
+
 .filter-btn.active {
   background: transparent;
   box-shadow: inset 4px 4px 6px #bebebe, inset -5px -5px 10px #ffffff;
   color: #000;
 }
 
-/* Text shadows inside buttons */
+
 .filter-btn span {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
   display: block;
