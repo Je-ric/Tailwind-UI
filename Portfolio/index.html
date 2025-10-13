@@ -15,85 +15,72 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/profile.css">
   </head>
-  <body class="bg-gray-200 p-4">
+  <body class="bg-gray-200 p-2 sm:p-4">
     <!-- Profile Section -->
-    <div class="max-w-sm mx-auto mb-8 bg-gray-200 rounded-xl p-6">
+    <div class="max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto mb-8 rounded-xl p-4 sm:p-6 shadow-lg">
       <div class="profile-top">
-        <h3 class="text-xl font-semibold mb-6 text-gray-800">About Me</h3>
-        <div class="profile">
+        <h3 class="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 text-gray-800">About Me</h3>
+        <div class="profile mx-auto">
           <div class="neumorphism-circle">
             <div class="circle-image">
               <div class="circle-again">
                 <img
                   src="/placeholder.svg?height=160&width=160"
                   alt="Profile Picture"
+                  class="w-full h-full object-cover"
                 />
               </div>
             </div>
           </div>
         </div>
-        <h2 class="hi text-lg font-medium text-gray-800 leading-relaxed">
+        <h2 class="hi text-base sm:text-lg font-medium text-gray-800 leading-relaxed mt-2 sm:mt-4">
           Hi, I'm <span class="highlight">Jeric</span> a
           <span class="highlight">Developer</span>
         </h2>
       </div>
 
-      <div class="profile-mid">
+      <div class="profile-mid mt-4 sm:mt-6">
         <div class="profile-bullet-text">
           <ul id="custom-list" class="space-y-2">
-            <li class="flex items-center text-sm">
-              <i class="bx bxs-cake text-lg mr-3"></i>
+            <li class="flex items-center text-xs sm:text-sm">
+              <i class="bx bxs-cake text-base sm:text-lg mr-2 sm:mr-3"></i>
               <span class="info">09/22/2004</span>
             </li>
-            <li class="flex items-center text-sm">
-              <i class="bx bxs-home text-lg mr-3"></i>
+            <li class="flex items-center text-xs sm:text-sm">
+              <i class="bx bxs-home text-base sm:text-lg mr-2 sm:mr-3"></i>
               <span class="info">Science City of Munoz, Nueva Ecija, 3119</span>
             </li>
-            <li class="flex items-center text-sm">
-              <i class="bx bxs-phone text-lg mr-3"></i>
+            <li class="flex items-center text-xs sm:text-sm">
+              <i class="bx bxs-phone text-base sm:text-lg mr-2 sm:mr-3"></i>
               <span class="info">+63 975-880-6128</span>
             </li>
           </ul>
         </div>
 
-        <div class="motto">
-          <p>
-            "If I have something to do today, I will do it now. To do something
-            else tomorrow."
+        <div class="motto mt-2 sm:mt-4">
+          <p class="text-xs sm:text-sm text-center font-light text-gray-600 px-2">
+            "If I have something to do today, I will do it now. To do something else tomorrow."
           </p>
         </div>
       </div>
 
-      <div class="profile-bottom">
-        <p>Reach Me</p>
-        <div class="profile-buttons">
-          <a
-            href="https://www.facebook.com/jeric.delacruz.18294"
-            id="social-icon"
-            target="_blank"
-          >
+      <div class="profile-bottom mt-4">
+        <p class="text-sm sm:text-base font-semibold mb-2">Reach Me</p>
+        <div class="profile-buttons flex flex-wrap justify-center gap-3 sm:gap-4">
+          <a href="https://www.facebook.com/jeric.delacruz.18294" id="social-icon" target="_blank">
             <i class="bx bxl-facebook-circle"></i>
           </a>
-          <a
-            href="https://www.instagram.com/hiro.deecee/"
-            id="social-icon"
-            target="_blank"
-          >
+          <a href="https://www.instagram.com/hiro.deecee/" id="social-icon" target="_blank">
             <i class="bx bxl-instagram-alt"></i>
           </a>
           <a href="https://github.com/Je-ric" id="social-icon" target="_blank">
             <i class="bx bxl-github"></i>
           </a>
-          <a
-            href="mailto:jericjdelacruz@gmail.com"
-            id="social-icon"
-            target="_blank"
-          >
+          <a href="mailto:jericjdelacruz@gmail.com" id="social-icon" target="_blank">
             <i class="bx bxs-envelope"></i>
           </a>
         </div>
       </div>
     </div>
-
   </body>
 </html>
