@@ -1,7 +1,4 @@
-
-
 .projects-container {
- 
   height: 600px;
   justify-content: space-between;
 }
@@ -20,14 +17,13 @@
 }
 
 .project-list {
- 
   transition: all 0.3s ease;
 }
 
 .project-item {
- 
   box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
 }
 
 .project-item:hover {
@@ -37,10 +33,8 @@
 }
 
 .project-item.active {
-  box-shadow: 
-      3px 3px 6px #a3b1c6,
-      -3px -3px 6px #ffffff;
-  background: linear-gradient(to right,#6a11cb, #2575fc);
+  box-shadow: 3px 3px 6px #a3b1c6, -3px -3px 6px #ffffff;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
 }
 
 .project-item.active h3 {
@@ -63,7 +57,6 @@
 }
 
 .tabProjectContent {
- 
   padding: 6px 12px;
   border-top: none;
 }
@@ -73,12 +66,11 @@
   color: #2d3748;
   font-size: 2.2em;
   margin-bottom: 20px;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .tabProjectContent p,
 .project-details p {
- 
   color: #4a5568;
   font-size: 1.1em;
   line-height: 1.6;
@@ -115,7 +107,6 @@
 }
 
 @media (max-width: 768px) {
- 
   .projects-container {
     height: auto;
   }

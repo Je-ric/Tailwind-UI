@@ -1,15 +1,13 @@
-
-
-
 :root {
   --default-box-shadow: 4px 4px 8px #a3b1c6, -4px -4px 8px #ffffff;
   --inset-box-shadow: inset 3px 3px 6px #a3b1c6, inset -3px -3px 6px #ffffff;
-  --inspiration-outer-shadow: inset 4px 4px 8px #d1d1d1, inset -4px -4px 8px #ffffff;
-  --inspiration-outer-hover-shadow: inset 2px 2px 6px #c7c7c7, inset -2px -2px 6px #ffffff;
+  --inspiration-outer-shadow: inset 4px 4px 8px #d1d1d1,
+    inset -4px -4px 8px #ffffff;
+  --inspiration-outer-hover-shadow: inset 2px 2px 6px #c7c7c7,
+    inset -2px -2px 6px #ffffff;
   --inspiration-tag-shadow: 3px 3px 6px #bebebe, -3px -3px 6px #ffffff;
   --inspiration-img-shadow: 2px 2px 4px #ccc, -2px -2px 4px #fff;
 }
-
 
 .dt-tag {
   box-shadow: var(--default-box-shadow);
@@ -19,7 +17,6 @@
   transform: translateY(-5px);
 }
 
-
 .lr-tag-group {
   box-shadow: var(--default-box-shadow);
 }
@@ -27,7 +24,6 @@
   box-shadow: var(--inset-box-shadow);
   transition: background 0.3s ease, transform 0.3s ease;
 }
-
 
 .v-tag {
   box-shadow: var(--default-box-shadow);
@@ -57,7 +53,6 @@
   z-index: 1;
 }
 
-
 .v-tag:nth-child(1) {
   background: linear-gradient(135deg, #333333, #6e6e6e);
 }
@@ -67,7 +62,6 @@
 .v-tag:nth-child(3) {
   background: linear-gradient(135deg, #007bff, #72c6ff);
 }
-
 
 .p-tag {
   box-shadow: var(--default-box-shadow);
@@ -80,7 +74,6 @@
   box-shadow: var(--inset-box-shadow);
 }
 
-
 .d-tag {
   box-shadow: var(--default-box-shadow);
   transition: transform 0.3s ease;
@@ -91,7 +84,6 @@
 .d-tag-group .d-tag .d-img-wrapper {
   box-shadow: inset 3px 3px 5px #bebebe, inset -3px -3px 5px #ffffff;
 }
-
 
 .i-tag-outer {
   box-shadow: var(--inspiration-outer-shadow);
@@ -108,7 +100,6 @@
 .i-tag img {
   box-shadow: var(--inspiration-img-shadow);
 }
-
 
 @media (max-width: 640px) {
   .i-tag-group {

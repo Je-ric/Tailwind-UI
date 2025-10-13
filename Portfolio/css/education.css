@@ -10,15 +10,11 @@
   }
 }
 
-
-
 .timeline-left {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
-
-
 
 .timeline-grid {
   display: grid;
@@ -32,24 +28,20 @@
   }
 }
 
-
-
-
 .circle {
   background: #e0e5ec;
   box-shadow: 9px 9px 16px #a3b1c6, -9px -9px 16px #ffffff;
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .circle:hover {
   box-shadow: -2px -2px 6px rgba(255, 255, 255, 0.6),
-              -2px -2px 4px rgba(255, 255, 255, 0.4),
-               2px 2px 2px rgba(0, 0, 0, 0.05),
-               2px 2px 4px rgba(0, 0, 0, 0.1);
+    -2px -2px 4px rgba(255, 255, 255, 0.4), 2px 2px 2px rgba(0, 0, 0, 0.05),
+    2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .circle::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 10px;
   left: 10px;
@@ -58,10 +50,18 @@
   border-radius: 50%;
 }
 
-.circle.c1::before { background: linear-gradient(135deg, #fc00ff, #00dbde); }
-.circle.c2::before { background: linear-gradient(135deg, #f12711, #f5af19); }
-.circle.c3::before { background: linear-gradient(135deg, #f4c4f3, #fc67fa); }
-.circle.c4::before { background: linear-gradient(135deg, #DCE35B, #45B649); }
+.circle.c1::before {
+  background: linear-gradient(135deg, #fc00ff, #00dbde);
+}
+.circle.c2::before {
+  background: linear-gradient(135deg, #f12711, #f5af19);
+}
+.circle.c3::before {
+  background: linear-gradient(135deg, #f4c4f3, #fc67fa);
+}
+.circle.c4::before {
+  background: linear-gradient(135deg, #dce35b, #45b649);
+}
 
 .inner-circle {
   background: #e0e5ec;
@@ -76,12 +76,9 @@
   font-weight: bold;
 }
 
-
-
 .school-name {
   box-shadow: 2px 2px 2px rgb(207, 206, 206) inset, -2px -2px 2px white inset;
 }
-
 
 .additional-text p {
   font-size: 0.875rem;
@@ -90,13 +87,12 @@
 }
 
 .image-container {
-  box-shadow:  5px 5px 10px #bebebe,
-              -5px -5px 10px #ffffff;
+  box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
 }
 .timeline-img img {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.timeline-title { 
+.timeline-title {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }

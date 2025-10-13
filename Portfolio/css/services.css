@@ -16,21 +16,18 @@
   box-shadow: 8px 8px 15px #bebebe, -8px -8px 15px #ffffff;
 }
 
-
 .service-right .service-item:hover .service-content h3,
 .service-right .service-item:hover .service-content p,
 .service-right .service-item:hover i {
-  background: -webkit-linear-gradient(-60deg, #FC466B, #3F5EFB);
+  background: -webkit-linear-gradient(-60deg, #fc466b, #3f5efb);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: none;
 }
 
-
 .service-right .service-item i {
   text-shadow: 1px 1px 3px #bebebe, -1px -1px 3px #ffffff;
 }
-
 
 .service-right .service-item .service-content h3,
 .service-right .service-item .service-content p {
@@ -50,11 +47,12 @@
   justify-content: center;
   align-items: center;
   box-shadow: 5px 5px 10px #b8bec5, -5px -5px 10px #ffffff;
-  transition: box-shadow 0.3s ease, transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 0.3s ease, background 0.3s ease,
+    color 0.3s ease;
 }
 
 .service-group:nth-child(1) i {
-  background: linear-gradient(135deg, #F7ACCF, #FF1053);
+  background: linear-gradient(135deg, #f7accf, #ff1053);
 }
 .service-group:nth-child(2) i {
   background: linear-gradient(135deg, #00c6ff, #0072ff, #ac34f1);
@@ -82,9 +80,6 @@
 
 .whatido .v1 {
   color: #e8e8e8;
-  text-shadow:
-    1px 1px 0 #000,
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
     -1px 1px 0 #000;
 }
