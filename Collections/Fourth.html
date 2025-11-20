@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WEB BEKS Tailwind</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .container {
+      perspective: 1000px;
+    }
+    .card {
+      transition: transform 0.5s ease, background-color 0.5s ease, color 0.5s ease;
+      transform-style: preserve-3d;
+    }
+    .container:hover .card,
+    .container:focus .card,
+    .container:active .card {
+      transform: perspective(500px) rotateY(30deg);
+    }
+    .card:hover,
+    .card:focus,
+    .card:active {
+      transform: perspective(500px) rotateY(0deg);
+    }
+    .card:hover ~ .card,
+    .card:focus ~ .card,
+    .card:active ~ .card {
+      transform: perspective(500px) rotateY(-30deg);
+    }
+    .card h2 {
+      transition: box-shadow 0.5s ease, background-color 0.5s ease, color 0.5s ease;
+    }
+    .card:hover h2,
+    .card:focus h2,
+    .card:active h2 {
+      background-color: white;
+      color: #2196f3;
+      box-shadow: 0 0 0 150px #2196f3;
+    }
+  </style>
+</head>
+<body class="flex items-center justify-center min-h-screen font-sans bg-gradient-to-t from-blue-700 via-blue-700 to-gray-200 p-10">
+
+  <div class="container flex flex-wrap justify-center max-w-[1000px]">
+    
+    <div class="card flex items-center justify-center w-[180px] h-[240px] m-8 bg-white rounded shadow-lg cursor-pointer overflow-hidden">
+      <h2 class="w-[80px] h-[80px] text-3xl flex items-center justify-center rounded-full bg-blue-500 text-white">1</h2>
+    </div>
+    
+    <div class="card flex items-center justify-center w-[180px] h-[240px] m-8 bg-white rounded shadow-lg cursor-pointer overflow-hidden">
+      <h2 class="w-[80px] h-[80px] text-3xl flex items-center justify-center rounded-full bg-blue-500 text-white">2</h2>
+    </div>
+    
+    <div class="card flex items-center justify-center w-[180px] h-[240px] m-8 bg-white rounded shadow-lg cursor-pointer overflow-hidden">
+      <h2 class="w-[80px] h-[80px] text-3xl flex items-center justify-center rounded-full bg-blue-500 text-white">3</h2>
+    </div>
+    
+    <div class="card flex items-center justify-center w-[180px] h-[240px] m-8 bg-white rounded shadow-lg cursor-pointer overflow-hidden">
+      <h2 class="w-[80px] h-[80px] text-3xl flex items-center justify-center rounded-full bg-blue-500 text-white">4</h2>
+    </div>
+    
+    <div class="card flex items-center justify-center w-[180px] h-[240px] m-8 bg-white rounded shadow-lg cursor-pointer overflow-hidden">
+      <h2 class="w-[80px] h-[80px] text-3xl flex items-center justify-center rounded-full bg-blue-500 text-white">5</h2>
+    </div>
+
+  </div>
+
+</body>
+</html>
