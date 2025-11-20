@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Tailwind Card Slider</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.css" />
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .swiper-slide {
+            opacity: 0;
+            transition: opacity .4s;
+        }
+
+        .swiper-slide-active {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body class="bg-[#602dad] min-h-screen flex items-center justify-center p-8">
+
+    <div
+        class="swiper-container bg-gradient-to-r from-[#f7f9ff] to-[#f2f6ff] max-w-[420px] max-h-[420px] w-full h-full rounded-xl shadow-xl relative">
+
+        <div class="swiper-wrapper">
+
+            <!-- Slide 1 -->
+            <div
+                class="swiper-slide flex flex-col rounded-xl overflow-hidden bg-gradient-to-r from-[#f7f9ff] to-[#f2f6ff]">
+                <div class="w-full h-[200px] overflow-hidden">
+                    <img class="w-full h-full object-cover"
+                        src="https://images.unsplash.com/photo-1498307833015-e7b400441eb8" />
+                </div>
+                <div class="p-8 flex flex-col gap-2">
+                    <h1 class="text-[#26384E] text-xl font-bold">Exploring Italy's Beauty</h1>
+                    <p class="text-[#889DB8] text-sm leading-6">
+                        Discover the breathtaking landscapes, rich history, and delectable
+                        cuisine of Italy in this mesmerizing journey.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div
+                class="swiper-slide flex flex-col rounded-xl overflow-hidden bg-gradient-to-r from-[#f7f9ff] to-[#f2f6ff]">
+                <div class="w-full h-[200px] overflow-hidden">
+                    <img class="w-full h-full object-cover"
+                        src="https://images.unsplash.com/photo-1491900177661-4e1cd2d7cce2" />
+                </div>
+                <div class="p-8 flex flex-col gap-2">
+                    <h1 class="text-[#26384E] text-xl font-bold">Exploring Hidden Bunkers</h1>
+                    <p class="text-[#889DB8] text-sm">
+                        Uncover the secrets of underground bunkers and their historical
+                        significance in this thrilling adventure.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div
+                class="swiper-slide flex flex-col rounded-xl overflow-hidden bg-gradient-to-r from-[#f7f9ff] to-[#f2f6ff]">
+                <div class="w-full h-[200px] overflow-hidden">
+                    <img class="w-full h-full object-cover"
+                        src="https://images.unsplash.com/photo-1482192505345-5655af888cc4" />
+                </div>
+                <div class="p-8 flex flex-col gap-2">
+                    <h1 class="text-[#26384E] text-xl font-bold">Scaling Small Mountains</h1>
+                    <p class="text-[#889DB8] text-sm">
+                        Embark on an adventurous journey to conquer the peaks of small
+                        mountains and embrace the thrill of the climb.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div
+                class="swiper-slide flex flex-col rounded-xl overflow-hidden bg-gradient-to-r from-[#f7f9ff] to-[#f2f6ff]">
+                <div class="w-full h-[200px] overflow-hidden">
+                    <img class="w-full h-full object-cover"
+                        src="https://images.unsplash.com/photo-1564604761388-83eafc96f668" />
+                </div>
+                <div class="p-8 flex flex-col gap-2">
+                    <h1 class="text-[#26384E] text-xl font-bold">Walking On a Dream</h1>
+                    <p class="text-[#889DB8] text-sm">
+                        Experience the dreamlike landscapes and surreal beauty of distant
+                        lands in this enchanting expedition.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="absolute w-full top-full mt-2 flex justify-end gap-2">
+            <button class="swiper-button-prev text-white">Prev</button>
+            <button class="swiper-button-next text-white">Next</button>
+        </div>
+
+        <!-- Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.js"></script>
+
+    <!-- JS Init -->
+    <script>
+        var swiper = new Swiper(".swiper-container", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            effect: "fade",
+            loop: true,
+            speed: 300,
+
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                dynamicBullets: true,
+            },
+
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+
+</body>
+
+</html>

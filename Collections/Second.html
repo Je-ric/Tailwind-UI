@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Movie Cards Tailwind</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+  <style>
+    body { font-family: Inter, sans-serif }
+    .details-blur { backdrop-filter: blur(16px) saturate(120%) }
+  </style>
+</head>
+
+<body class="min-h-screen flex items-center justify-center bg-gray-100 p-6">
+
+  <div class="flex flex-wrap gap-6 justify-center">
+
+    <div class="relative w-[325px] h-[450px] rounded-xl overflow-hidden shadow-lg bg-black group">
+      <div class="absolute inset-0 overflow-hidden">
+        <img src="https://i.postimg.cc/jjBSrfnQ/poster1-img.jpg"
+             class="w-full h-full object-cover transition-all duration-300 group-hover:scale-110" />
+        <div class="absolute inset-x-0 bottom-[-45%] h-full bg-gradient-to-t from-black/90 via-black/50 to-transparent transition-all duration-300 group-hover:bottom-0"></div>
+      </div>
+
+      <div class="absolute bottom-[-100%] w-full p-6 text-white bg-black/40 details-blur transition-all duration-300 group-hover:bottom-0 z-10">
+        <h1 class="text-xl font-bold">Location Unknown</h1>
+        <h2 class="text-sm opacity-60 mb-3">2021 • PG • 1hr 38min</h2>
+
+        <div class="flex items-center gap-1 mb-3 text-yellow-400">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bx-star"></i>
+          <span class="text-white ml-1">4.2/5</span>
+        </div>
+
+        <div class="flex gap-2 mb-3 text-xs">
+          <span class="px-3 py-1 rounded-full border border-white/40">Italian</span>
+          <span class="px-3 py-1 rounded-full border border-white/40">Drama</span>
+          <span class="px-3 py-1 rounded-full border border-white/40">Indie</span>
+        </div>
+
+        <p class="text-sm opacity-80 mb-4 leading-relaxed">
+          Marco, a disillusioned backpacker in his late 20s, embarks on a solitary journey in search for meaning.
+        </p>
+
+        <h3 class="font-semibold mb-2">Cast</h3>
+
+        <ul class="flex gap-2">
+          <li class="w-14 h-14 rounded-full overflow-hidden border border-white">
+            <img src="https://i.postimg.cc/jqgkqhSb/cast-11.jpg" class="w-full h-full object-cover"/>
+          </li>
+          <li class="w-14 h-14 rounded-full overflow-hidden border border-white">
+            <img src="https://i.postimg.cc/8P7X7r7r/cast-12.jpg" class="w-full h-full object-cover"/>
+          </li>
+          <li class="w-14 h-14 rounded-full overflow-hidden border border-white">
+            <img src="https://i.postimg.cc/2SvHwRFk/cast-13.jpg" class="w-full h-full object-cover"/>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="relative w-[325px] h-[450px] rounded-xl overflow-hidden shadow-lg bg-black group">
+      <div class="absolute inset-0 overflow-hidden">
+        <img src="https://i.postimg.cc/GtxLYS7q/poster2-img.jpg"
+             class="w-full h-full object-cover transition-all duration-300 group-hover:scale-110" />
+        <div class="absolute inset-x-0 bottom-[-45%] h-full bg-gradient-to-t from-black/90 via-black/50 to-transparent transition-all duration-300 group-hover:bottom-0"></div>
+      </div>
+
+      <div class="absolute bottom-[-100%] w-full p-6 text-white bg-black/40 details-blur transition-all duration-300 group-hover:bottom-0 z-10">
+        <h1 class="text-xl font-bold">Air</h1>
+        <h2 class="text-sm opacity-60 mb-3">2020 • PG • 24min</h2>
+
+        <div class="flex items-center gap-1 mb-3 text-yellow-400">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bx-star"></i>
+          <span class="text-white ml-1">4/5</span>
+        </div>
+
+        <div class="flex gap-2 mb-3 text-xs">
+          <span class="px-3 py-1 rounded-full border border-white/40">Romance</span>
+          <span class="px-3 py-1 rounded-full border border-white/40">Comedy</span>
+          <span class="px-3 py-1 rounded-full border border-white/40">Short</span>
+        </div>
+
+        <p class="text-sm opacity-80 mb-4 leading-relaxed">
+          Lily, the travel writer, and Nathan, the book editor, goes on a plane together to the alps.
+        </p>
+
+        <h3 class="font-semibold mb-2">Cast</h3>
+
+        <ul class="flex gap-2">
+          <li class="w-14 h-14 rounded-full overflow-hidden border border-white">
+            <img src="https://i.postimg.cc/yY2QcYRp/cast-21.jpg"/>
+          </li>
+          <li class="w-14 h-14 rounded-full overflow-hidden border border-white">
+            <img src="https://i.postimg.cc/R0BgpsXc/cast-22.jpg"/>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="relative w-[325px] h-[450px] rounded-xl overflow-hidden shadow-lg bg-black group">
+      <div class="absolute inset-0 overflow-hidden">
+        <img src="https://i.postimg.cc/yxH6DzPD/poster3-img.jpg"
+             class="w-full h-full object-cover transition-all duration-300 group-hover:scale-110" />
+        <div class="absolute inset-x-0 bottom-[-45%] h-full bg-gradient-to-t from-black/90 via-black/50 to-transparent transition-all duration-300 group-hover:bottom-0"></div>
+      </div>
+
+      <div class="absolute bottom-[-100%] w-full p-6 text-white bg-black/40 details-blur transition-all duration-300 group-hover:bottom-0 z-10">
+        <h1 class="text-xl font-bold">End Credits</h1>
+        <h2 class="text-sm opacity-60 mb-3">2021 • R • 1hr 41min</h2>
+
+        <div class="flex items-center gap-1 mb-3 text-yellow-400">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star-half"></i>
+          <span class="text-white ml-1">4.7/5</span>
+        </div>
+
+        <div class="flex gap-2 mb-3 text-xs">
+          <span class="px-3 py-1 rounded-full border border-white/40 bg-yellow-600/60">Teen</span>
+          <span class="px-3 py-1 rounded-full border border-white/40">Comedy</span>
+          <span class="px-3 py-1 rounded-full border border-white/40 bg-blue-600/60">Drama</span>
+        </div>
+
+        <p class="text-sm opacity-80 mb-4 leading-relaxed">
+          Alex and his best friend goes on a road trip whilst experiencing friendship, self-discovery, and the bittersweet transition to adulthood.
+        </p>
+
+        <h3 class="font-semibold mb-2">Cast</h3>
+
+        <ul class="flex gap-2">
+          <li class="w-14 h-14 rounded-full overflow-hidden border border-white">
+            <img src="https://i.postimg.cc/xd3twv4B/cast-31.jpg"/>
+          </li>
+          <li class="w-14 h-14 rounded-full overflow-hidden border border-white">
+            <img src="https://i.postimg.cc/C1MmSZy5/cast-32.jpg"/>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
